@@ -8,7 +8,7 @@
 2. [HTML](02_html.md) • structure and content
 3. [CSS](03_css.md) • look and feel
 4. [framework](04_frameworks.md) • easier & more standards-compliant web design
-5. [JS](js.md) • behavior
+5. [JS](05_js.md) • behavior
 
 
 <!--
