@@ -5,11 +5,11 @@
 - hypertext: links connect pages
 - markup: syntax to give meaning to content
 
-# HTML elements, tags and attributes
+## HTML elements, tags and attributes
 
 ![elements, tags and attributes](./img/element-tag-attribute.png)
 
-# Elements and tags
+### Elements and tags
 
 - HTML elements are the building blocks of HTML pages.
 - `<p>`, `<table>`, ...
@@ -21,7 +21,7 @@ Start and end tags:
 - An element usually has a start and end tag, an opening and closing tag.
 - For example: `<p>` and `</p>`.
 - A start (= opening) tag starts with `<` and ends with `>`.  
-- An end (= closing) tag starts with `<` and ends with `/>`.
+- An end (= closing) tag starts with `</` and ends with `>`.
 - Not all tags have closing tags. For example: `<br>`, a break, or a new line. Another example: `<img>`.
 
 Tag names:
@@ -31,7 +31,7 @@ Tag names:
 
 Overview of all HTML tags: https://developer.mozilla.org/en-US/docs/Web/HTML/Element
 
-# Attributes
+### Attributes
 
 - Some elements have attributes.
 - Attributes are used to add extra info to an element.
@@ -41,14 +41,14 @@ Overview of all HTML tags: https://developer.mozilla.org/en-US/docs/Web/HTML/Ele
 - Some attributes are required, while others are optional. For example: the `src` attribute is required for an `<img>` tag. The `width` attribute for an `<img>` is optional.
 - An element can have multiple attributes, separated by a space. The order is not important. For example: `<img src="logo.png" width="100" height="200">`.
 
-# Looking at the HTML of a website
+## Looking at the HTML of a website
 
 You can look at the HTML of any page and see how it's made:
 
 - In most browsers, you can right-click on an element, and then select 'Inspect element'. A panel will open and show you the source of that element.
 - You can see the entire HTML source of a webpage by right-clicking on the page in your browser, and then select 'View page source'.
 
-# Hierarchical relations between elements
+## Hierarchical relations between elements
 
 Elements can contain other elements. For example:
 
@@ -90,7 +90,7 @@ The element that is opened last has to be closed first.
 
 Browser are very forgiving. If you make a mistake, they will try to guess what you meant. In many cases, your page might work even if it contains errors. However, you should always avoid these situations, because it will lead to frustration and confusion when you start applying CSS and JS.
 
-# Whitespace in HTML documents
+## Whitespace in HTML documents
 
 - Whitespace = spaces, tabs, line break (new line).
 - Browser ignore almost all whitespace.
@@ -146,7 +146,7 @@ This piece of HTML has 3 levels. Each level is indented with a specific number o
 
 Using indentation (tabs or spaces) is not required, but it helps a lot.
 
-# Organizing files
+## Organizing files
 
 No fixed rules. Typical directory structure of a website:
 
@@ -156,7 +156,7 @@ No fixed rules. Typical directory structure of a website:
 - `css/` -> directory with stylesheets
 - `js/` -> directory with JavaScript files
 
-# Rules for filenames
+## Rules for filenames
 
 HTML documents typically use the extension `.htm` or `.html`. The last one is more common.
 
@@ -165,20 +165,20 @@ The following rules apply to HTML documents, and other files, like images, CSS, 
 - It's best to avoid spaces in filenames. Use a dash `-` or an underscore `_` instead. Reason: spaces are not allowed in URL's.
 - Use lowercase for filenames. Reason: the server your site is on might be case-sensitive, meaning: `Index.html` and `index.html` are two different documents. This could mean that your site works on your computer, but that links and images are broken when you put it online. Avoid confusion by using lowercase everywhere.
 
-# URL's
+## URL's
 
 URL's are used for links, images, ...
 
 A URL can absolute or relative.
 
-Absolute URL's:
+### Absolute URL's:
 
-- For example: `https://google.es`, `https://esdi.es/img/logo.png`, `http://mysite.com/js/app.js`, ...
+- For example: `https://google.be`, `https://kask.be/img/logo.png`, `http://mysite.com/js/app.js`, ...
 - Start with `http://` or with `https://`.
 - Advantage: they work everywhere. You can move your HTML document to another directory, another server, ... and the URL will still work.
 - Disadvantage: a lot of repetition and typing.
 
-Relative URL's:
+### Relative URL's:
 
 - For example: `about_us.html`, `img/logo.png`, `/`, `../data/projects.json`, ...
 - Don't start with http:// or with https://.
@@ -204,7 +204,7 @@ If you want to link from `about.html` to `welcome.html`, you use the URL `../wel
 
 You can repeat `..` as many times as necessary, for example: `../../../my_page.html`.
 
-# Basic structure of an HTML document
+### Basic structure of an HTML document
 
 This is a minimal HTML page:
 
@@ -221,13 +221,13 @@ This is a minimal HTML page:
 </html>
 ```
 
-## Doctype
+### Doctype
 
 - Necessary, but no need to worry about the details.
 - Must be on the first line.
 - Mostly needed for historical reasons. There are different versions of HTML. By using this `DOCTYPE`, we tell the browser we want to use HTML 5.
 
-## `<html>`
+### `<html>`
 
 - An HTML document contains HTML elements.
 - The `<html>` element is the container for the whole page.
@@ -237,7 +237,7 @@ This is a minimal HTML page:
 - These are required. In other parts of the document you are free to include other elements, but inside `<html>` we need to use `<head>` and `<body>`.
 - Always set the `lang` attribute of the `<html>` element so search engines and other software know what language your document is in.
 
-## `<head>`
+### `<head>`
 
 - The `<head>` element contains meta information, meaning info about the document itself.
 - Most important: the `<title>` of the document.
@@ -246,7 +246,7 @@ This is a minimal HTML page:
 - `<meta charset="utf-8">` means: use the UTF-8 character set, which allows you to use characters from most languages (including Chinese, Japanese, ...)
 - Other things that can appear in the `<head>` element: references to stylesheets, reference to the favicon, ...
 
-## `<body>`
+### `<body>`
 
 - The `<body>` element contains the actual content: text, images, ...
 
@@ -258,16 +258,16 @@ This is a minimal HTML page:
 - Copy and paste the HTML and click 'Check'.
 - Read the results and fix any errors.
 
-## Exercise: fix a badly made HTML page
+### Exercise: fix a badly made HTML page
 
 - You will fix a badly made HTML document. There are many errors: invalid nesting, missing elements, ...
 - [Download the exercise](https://raw.githubusercontent.com/theBlackBoxSociety/HTML-CSS-tutorial/tree/main/exercises/fix_incorrect_html/index.html) (Right-click and select 'Save link as')
 - Check if your document is valid on https://validator.w3.org.
 - Keep working on it until the validator says you have no errors and warnings.
 
-# Commonly used HTML elements
+## Commonly used HTML elements
 
-## Inline vs block-level elements
+### Inline vs block-level elements
 
 HTML elements can be divided in 2 groups: block-level and inline.
 
@@ -283,7 +283,7 @@ Inline elements:
 - can be part of a line of text
 - do no start a new line
 
-## Headings
+### Headings
 
 - `<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, `<h6>`
 - These are block-level elements.
@@ -291,13 +291,13 @@ Inline elements:
 - `<h2>` = subtitle
 - Use headings to indicate the logical levels in your text.
 
-## Paragraphs and breaks
+### Paragraphs and breaks
 
 - `<p>This is a paragraph.<p>`
 - Use a break `<br>` to create a new line in a paragraph.
 - Paragraphs are block level elements.
 
-## Lists
+### Lists
 
 - Very common. Also used for navigation items.
 - Can be ordered (with a numbering) and unordered (no numbering).
@@ -338,7 +338,7 @@ Lists can also be nested:
 </ol>
 ```
 
-## Images
+### Images
 
 - ```<img src="path_to_image" alt="alternative text for image">```
 - The `src` attribute is required.
@@ -348,7 +348,7 @@ Lists can also be nested:
 - Images are inline level elements.
 - Browsers support GIF, JPEG, PNG and SVG. You will need to convert other file formats to a supported format first, or the browser will not show it.
 
-## Links
+### Links
 
 - `<a href="path_to_link">content that is looks like a  link</a>`
 - `<a>` stands for 'anchor'
@@ -380,17 +380,17 @@ Linking an image:
 
 Email links:
 
-- `<a href="mailto:bert@rekall.be">send me a mail</a>`
+- `<a href="mailto:jan@kask.be">send me a mail</a>`
 - Clicking on the link will open a mail client (Outlook, Thunderbird, Apple Mail, ...)
 
-## Comments
+### Comments
 
 - `<!-- some comment  -->`
 - Never shown by the browser.
 - You can use this to clarify the structure of your document.
 - Useful to temporarily hide something while working on a page.
 
-## Entities
+### Entities
 
 - Some characters have a special meaning.
 - For example `<` is the start of the tag.
@@ -402,13 +402,13 @@ Common entities:
 - `&lt;` for `<` (`lt` stands for lesser than)
 - `&amp;` for `&` (`amp` stands for ampersand)
 
-## Text formatting
+### Text formatting
 
 - `<b>`, `<strong>`: bold
 - `<i>`, `<em>`: italic
 - `<hr>`: horizontal rule
 
-## Tables
+### Tables
 
 Example:
 
@@ -443,7 +443,7 @@ Example:
 - Inside each `<tr>`, create a `<td>` element. `td` = table data.
 - For the column titles, you can use a `<th>` instead of a `<td>`. `th` = table heading.
 
-## Structural elements
+### Structural elements
 
 These can help structuring your document:
 
@@ -474,7 +474,7 @@ Usually these elements are directly under the `<body>` element:
 </html>
 ```
 
-# Exercise: turn some content into a website
+## Exercise: turn some content into a website
 
 - You will make a mini-website with 2 pages: a homepage and an about page.
 - Create a new, empty folder for this. Create the necessary files and directories. The images should be in a separate folder.

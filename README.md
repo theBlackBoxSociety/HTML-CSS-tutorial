@@ -3,12 +3,12 @@
 
 ## Contents
 
-0. [Tools](00_requirements.md) • What do we need?
-1. [Intro](01_intro.md) • a cake with 3 layers
-2. [HTML](02_html.md) • structure and content
-3. [CSS](03_css.md) • look and feel
-4. [framework](04_frameworks.md) • easier & more standards-compliant web design
-5. [JS](05_js.md) • behavior
+## [Tools](00_requirements.md) • What do we need?
+## [Intro](01_intro.md) • a cake with 3 layers
+## [HTML](02_html.md) • structure and content
+## [CSS](03_css.md) • look and feel
+## [framework](04_frameworks.md) • easier & more standards-compliant web design
+## [JS](05_js.md) • behavior
 
 
 <!--
