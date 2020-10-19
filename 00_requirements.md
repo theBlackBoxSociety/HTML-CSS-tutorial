@@ -1,8 +1,8 @@
 *---[ A crashcourse in Code]---*
-# HTML, CSS & JS
+
 In web development, there are several different tools working in tandem to make things run. The pieces can seem overwhelming at first, but let's take it step by step.
 
-## These are the requirements
+## Our requirements
 - [a browser](#browsers)
 - [a text editor](#text--code-editor)
 - [an FTP client](#ftp-client)

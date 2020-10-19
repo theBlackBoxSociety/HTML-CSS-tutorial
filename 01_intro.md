@@ -1,10 +1,8 @@
-# HTML, CSS & JS
-
 ## A webpage is like a cake with 3 layers
 
-- HTML = structure
-- CSS = design
-- JavaScript = interaction
+- [HTML](#html) = structure and content
+- [CSS](#css) = design or look and feel
+- [JavaScript](#javascript) = interaction and behaviour
 
 Each technology has its responsibility.
 
