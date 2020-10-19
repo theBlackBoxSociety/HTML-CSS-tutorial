@@ -2,13 +2,13 @@
 
 ## Contents
 
-0. [Tools](00_requirements.md) 
-1. [Intro](01_intro.md) • Definitions
-2. [HTML](02_html.md) • 
-3. [CSS](03_css.md) • 
-4. [framework](04_frameworks.md) • working with a html/css library for easier & more standards-compliant web design
-5. [JS](js.md) • 
-6. [PHP]()
+0. [Tools](00_requirements.md) • What do we need?
+1. [Intro](01_intro.md) • a cake with 3 layers
+2. [HTML](02_html.md) • structure and content
+3. [CSS](03_css.md) • look and feel
+4. [framework](04_frameworks.md) • easier & more standards-compliant web design
+5. [JS](js.md) • behavior
+6. [PHP]() • a server site scripting language
 
 <!--
 4. [Forms](04_forms.md)

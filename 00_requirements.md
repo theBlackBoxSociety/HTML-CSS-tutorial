@@ -2,13 +2,13 @@
 # HTML, CSS & JS
 In web development, there are several different tools working in tandem to make things run. The pieces can seem overwhelming at first, but let's take it step by step.
 
-## requirements
+## These are the requirements
 - a browser
 - a text editor
 - an FTP client 
 - webspace / webhosting
 
-### Browsers
+## Browsers
 
 - There are standards for HTML, CSS and JS, but each browser implements these in their own way. You can never be completely sure that a page will look exactly the same in all browsers.
 - Chrome for desktop is not the same as Chrome for mobile. Same with Safari.
@@ -18,7 +18,7 @@ In web development, there are several different tools working in tandem to make 
 - On mobile, you should test in Chrome and Safari.
 - Testing is especially important with CSS and JavaScript.
 
-#### Most popular browsers (Oct 2020)
+### Most popular browsers (Oct 2020)
 
 On desktop:    
 - Chrome (Windows + Mac): 70%
@@ -34,7 +34,7 @@ See https://gs.statcounter.com/browser-market-share/mobile/worldwide.
 
 See https://gs.statcounter.com for more statistics.
 
-### Text / Code editor
+## Text / Code editor
 You are free to choose. 
 
 Recommendations:
@@ -46,14 +46,14 @@ Recommendations:
 Pick one editor and learn it well, especially the shortcuts. I'll be using Atom in class.
 
 
-### FTP Client
+## FTP Client
 Again free to choose. 
 
 Recommendations:
 - [Cyberduck](https://cyberduck.io/) (windows & OSX)
 - [Filezilla](https://filezilla-project.org/)
 
-### Webhosting
-Often in web development, you'll build something and test it by running it on your computer without putting it out on the internet at all. In this case, your computer is acting as a small-scale server. That's referred to as running something locally. Because a server is essentially just a program, they can live any number of places, including on your laptop where you're the only one who can access it. Of course, we're going to pretty quickly want to start putting things out to the outside world, aka TEH INTERNETZ, more formally known as a remote server.
-
+## Webhosting
 It's common that your workflow will consist of testing and running locally (on your computer), and then uploading and deploying remotely.
+
+Often in web development, you'll build something and test it by running it on your computer without putting it out on the internet at all. In this case, your computer is acting as a small-scale server. That's referred to as running something **locally**. Because a server is essentially just a program, they can live any number of places, including on your laptop where you're the only one who can access it. Of course, we're going to pretty quickly want to start putting things out to the outside world, aka TEH INTERNETZ, more formally known as **a remote server**.
