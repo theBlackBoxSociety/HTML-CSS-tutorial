@@ -1,0 +1,29 @@
+body {
+    font-family: Verdana, sans-serif;
+}
+
+h1, h2 {
+    font-family: "Times New Roman", serif;
+}
+
+header a {
+    text-decoration: none;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+header {
+    border-bottom: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+footer {
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+    padding: 10px 0;
+    font-size: 10px;
+    text-align: right;
+}
+
