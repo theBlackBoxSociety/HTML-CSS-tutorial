@@ -1,6 +1,4 @@
-# HTML recap
 
-- Quiz: https://www.w3schools.com/quiztest/quiztest.asp?qtest=HTML
 
 # CSS
 
@@ -9,13 +7,13 @@
 - CSS = rules defined by you that tell the browser how to display the elements in your HTML page.
 - Very powerful, see for example https://www.w3schools.com/css/css_intro.asp. CSS can be used to transform an HTML document in many different forms.
 
-# What can you do with CSS?
+## What can you do with CSS?
 
 - Design: colors, background colors, space between elements, ...
 - Typography: fonts, ...
 - Positioning: columns, overlaying elements, ...
 
-# CSS files
+## CSS files
 
 - Usually, CSS rules are placed in separate files, commonly called 'stylesheets'.
 - These files have the extension `.css`.
@@ -42,7 +40,7 @@ For example:
 - Yes, you can have multiple stylesheets connected to the same HTML document. But in most case you'll want to keep it simple: just 1 stylesheet.
 - Sometimes there are good reasons to create multiple stylesheets. For example: one for display on screen, and one for when the page is printed (with different fonts, only grayscale to save ink, ...)
 
-# Rules
+## Rules
 
 So CSS files contain rules. A rule consists of:
 
@@ -80,7 +78,7 @@ p {
 
 The order of the declarations does not matter. We could have listed `background-color` first and the result would have been the same.
 
-## Exercise: linking a CSS file to an HTML document 
+### Exercise: linking a CSS file to an HTML document 
 
 - Create a new directory called `css-tutorial`.
 - Create an HTML document in this directory. Name it `index.html`.
@@ -90,21 +88,21 @@ The order of the declarations does not matter. We could have listed `background-
 - Connect the stylesheet to the HTML document.
 - Use the stylesheet to color the paragraphs red.
 
-# Browser default stylesheet
+## Browser default stylesheet
 
 - Even if you don't add any rules at all to a page, the browser will still apply some CSS rules.
 - Reason: the browser has a default stylesheet.
 - It sets reasonable defaults: text is in black, background is white, links are underlined an in blue, an `<h1>` will be larger than a `<h2>`, ...
 - You can override these with your own CSS.  
 
-# Selectors
+## Selectors
 
 - Selectors: used to 'select' a part of the page. Selectors allow you to precisely define to what HTML the rules will apply.
 - There are many different types of selectors. The system is very flexible.
 - Understanding selectors is also important for JavaScript.
 - In many cases, multiple rules can apply on an element. In that case, the most specific rule wins. This will become clear later.
 
-## Tag selectors
+### Tag selectors
 
 - Easiest to understand.
 - Example: `p`, `h1`, ... 
@@ -121,12 +119,12 @@ p {
 
 This will make all paragraphs blue.
 
-### Exercise
+#### Exercise
 
 - Add an `h1` and an `h2` to your `index.html`.
 - Use CSS to make the `h1` blue, and the `h2` green.
 
-## Inheritance
+### Inheritance
 
 If you apply a property to an element, all the children of that element will also inherit that rule.
 
@@ -157,13 +155,13 @@ Remember:
 
 Most CSS properties work like this: colors, fonts, ... But there are exceptions: for example margins.
 
-### Exercise
+#### Exercise
 
 - Set the default color of your document to white.
 - Set the default background color of your document to black.
 - Test it out by adding a `<ul>` to the document. The text should be white.
 
-## Grouping selectors
+### Grouping selectors
 
 You can group selectors by using comma's. For example:
 
@@ -189,12 +187,12 @@ h2 {
 }
 ``` 
 
-### Exercise
+#### Exercise
 
 - Change the default font to Arial. You can set the font like this: `font-family: Arial, sans-serif`.
 - Set the font of the headings to Courier: `font-family: Courier, monospace`.
 
-## Selecting elements inside other elements
+### Selecting elements inside other elements
 
 Use a space to indicate that you want to select elements appearing inside other elements. For example, this will only affect links in paragraphs. The rule will not be applied to other links.
 
@@ -204,14 +202,14 @@ p a {
 }
 ``` 
 
-### Exercise
+#### Exercise
 
 - Add 1 link (`<a href="...`) in a paragraph.
 - Add another link in the `<ul>`.
 - Change the default color of links to yellow.
 - Set the color of links inside a paragraph to pink.
 
-## The `class` attribute
+### The `class` attribute
 
 - Tag selectors are useful, but in many cases you want to be more specific. For example, you want apply a rule only to some paragraphs, not to all.
 - In this case you can use the `class` attribute. This attribute can be added to any HTML element. You can then reference it in your CSS.
@@ -265,7 +263,7 @@ p.intro {
 
 This means: apply the rule to `<p>` elements that have the class intro, but not to other elements, like headings.
 
-## Pseudo-classes
+### Pseudo-classes
 
 CSS has a few pseudo-classes. They work like classes, but you can't define them yourself. The browser automatically makes them available for you.
 
@@ -283,11 +281,11 @@ a:hover {
 
 See https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes for more pseudo-classes.
 
-### Exercise
+#### Exercise
 
 Change the color of the links when hovering.
 
-## The `id` attribute
+### The `id` attribute
 
 - Similar to the `class` attribute, but the value of an `id` attribute can only appear once in the page. (The same `class` can be used as much as you want in a document.)
 - Less used than `class`, but you might see it.
@@ -305,13 +303,13 @@ Example:
 }
 ``` 
 
-### Exercise
+#### Exercise
 
 - Add a shopping list using a `<ul>`.
 - Give it a class `shopping-list`.
 - Make the font for the shopping list smaller using `font-size: 10px`. 
 
-## The most specific rule wins
+### The most specific rule wins
 
 What happens when multiple rules can be applied to an element?
 
@@ -355,7 +353,7 @@ What color will each element have?
 - The `<p>` elements will be blue by default, because they have a rule that is more specific than the one for `<body>`.
 - The first paragraph has an even more specific rule: a combination of the tag name and a class name. This is more specific than the general rule for paragraphs.
 
-## `<div>` and `<span>`
+### `<div>` and `<span>`
 
 - HTML elements are used to apply meaning to a document, for example: `<h1>` means 'important title'.
 - There are 2 elements that don't have any meaning at all: `<div>` and `<span>`.
@@ -399,17 +397,17 @@ A `<span>` is similar, but it works inline. For example:
 }
 ```
 
-## Exercises
+### Exercises
 
 - Add a footer to your page using a `<div>` and a `class`. 
 - Add your name in the footer.
 - Make the text in the footer smaller.
 
-## More exercises
+### More exercises
 
 https://www.w3schools.com/css/css_selectors.asp
 
-# Applying CSS to HTML documents
+## Applying CSS to HTML documents
 
 3 different ways to apply CSS to HTML:
 
@@ -417,14 +415,14 @@ https://www.w3schools.com/css/css_selectors.asp
 - Internal stylesheets.
 - Inline CSS.
 
-## External stylesheets
+### External stylesheets
 
 - This is what we used so far. 
 - This is the most common and most useful.
 - The CSS rules are in an external, separate document.
 - The external document is linked to the HTML document with a `<link>` element in the `<head>`.
 
-## Internal stylesheets
+### Internal stylesheets
 
 - The rules are inside a `<style>` element in the `<head>`.
 - Less useful, because can only be used for 1 document.
@@ -452,7 +450,7 @@ Example:
 </html> 
 ```
 
-## Inline styles
+### Inline styles
 
 - CSS rules are added to an HTML document with a `style` attribute.
 - The rules then only apply to that specific element.
@@ -468,9 +466,9 @@ Example:
 <p>I am not red.</p>
 ```
 
-# CSS syntax
+## CSS syntax
 
-## Defining colors
+### Defining colors
 
 Colors are used for text color, backgrounds, borders, ...
 
@@ -481,7 +479,7 @@ Colors can be expressed in many different ways:
 - Color names like lime, red, ...
 - And a series of less used methods, like CMYK, HSV, ...
 
-### RGB
+#### RGB
 
 - RGB = red, green, blue. 
 - Each color is expressed as a number from 0 to 255.
@@ -503,7 +501,7 @@ p {
 }
 ```
 
-### Hexadecimal values
+#### Hexadecimal values
 
 - Similar to RBG, but uses hexadecimal instead decimal values.
 - Shorter name: 'hex'.
@@ -518,18 +516,18 @@ p {
 - A hex value can be shortened if it is composed of 3 groups of repeating digits. For example: `#ff3344` can be shortened as `#f34`.
 - Hex values are very common. 
 
-### Color names
+#### Color names
 
 - Browsers also understand more than 100 color names. For example: red, yellow, ...
 - See https://www.w3schools.com/colors/colors_names.asp.
 
-## Property names
+### Property names
 
 - Examples: `font-size`, `color`, ...
 - CSS property names are always lowercase.
 - Never contain spaces. A `-`, a hyphen is used to separate words, like `font-size`.   
 
-## Units
+### Units
 
 Many property values are expressed as quantities, for example: font sizes, padding, ... In most cases, you will need to tell the browser what unit you are using by adding the symbol for the quantity after the amount.
 
@@ -552,16 +550,16 @@ Common units with their symbols:
 
 You can also use `cm` (centimeter) and other units, but these don't make much sense when designing for screens.
 
-## Comments
+### Comments
 
 - Everything between `/*` and `*/` is considered a comment.
 - Note: this is not the same as a HTML comment: `<!-- this is a HTML comment -->`.
 
-# Commonly used properties
+## Commonly used properties
 
 There are hundreds of properties. See https://www.w3schools.com/cssref/ for a complete list. Here we only mention the commonly used ones.
 
-## `color`
+### `color`
 
 Used to set the 'foreground color' of an element, including the text color. Example:
 
@@ -571,7 +569,7 @@ h1 {
 }
 ```
 
-## `background-color`
+### `background-color`
 
 Used to set the background color of an element. Example:
 
@@ -581,7 +579,7 @@ h1 {
 }
 ```
 
-## `border`
+### `border`
 
 `border` is a shorthand to set 3 properties:
 
@@ -616,7 +614,7 @@ You can also apply a border only to 1 side by using these variants:
 
 They work the same as `border`.
 
-## `margin` and `padding`
+### `margin` and `padding`
 
 These properties are used to control the whitespace around an element. Margin and padding are not the same. 
 
@@ -664,7 +662,7 @@ p {
 }
 ```
 
-## Typography
+### Typography
 
 - `text-align`: `left`, `right`, `center`
 - `text-decoration`: `underline`, `none` (useful to remove the standard underlining of links)
@@ -672,7 +670,7 @@ p {
 - `line-height`: space between lines. 1 is standard. > 1 = more space. 
 - `font-weight`: `bold`, `normal`, ...
 
-## Fonts
+### Fonts
 
 - Fonts are set using `font-family`.
 - You give this property a list of fonts.
@@ -698,7 +696,7 @@ What fonts can be used?
 
 See https://www.balbooa.com/knowledgebase/32-documentation-faq-joomla/176-how-to-add-custom-font-to-website-through-fontface for more info on the third option. Here we only look at options 1 and 2.
 
-### Using commonly available fonts
+#### Using commonly available fonts
 
 - Easiest option.
 - Very limited: only 5-6 fonts: Times New Roman, Arial, Verdana, Courier, Georgia.
@@ -711,7 +709,7 @@ p {
 }
 ```
 
-### Using a font service
+#### Using a font service
 
 - Every service works slightly different.
 - Here we take a look at https://fonts.google.com.
@@ -735,7 +733,7 @@ body {
 }
 ```
 
-# Exercise: styling a website
+## Exercise: styling a website
 
 - [Go back to the last HTML exercise.](02_html.md#exercise-turn-some-content-into-a-website)
 - You can find a [solution here](exercises/content_to_website/solution).

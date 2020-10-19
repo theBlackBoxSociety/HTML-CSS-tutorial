@@ -1,4 +1,3 @@
-TOC
 - [HTML elements, tags and attributes](#html-elements-tags-and-attributes)
 	- [Elements and tags](#elements-and-tags)
 	- [Attributes](#attributes)
