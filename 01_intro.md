@@ -1,4 +1,3 @@
-*---[ A crashcourse in Code]---*
 # HTML, CSS & JS
 
 ## A webpage is like a cake with 3 layers

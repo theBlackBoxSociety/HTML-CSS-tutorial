@@ -56,4 +56,13 @@ Recommendations:
 ## Webhosting
 It's common that your workflow will consist of testing and running locally (on your computer), and then uploading and deploying remotely.
 
-Often in web development, you'll build something and test it by running it on your computer without putting it out on the internet at all. In this case, your computer is acting as a small-scale server. That's referred to as running something **locally**. Because a server is essentially just a program, they can live any number of places, including on your laptop where you're the only one who can access it. Of course, we're going to pretty quickly want to start putting things out to the outside world, aka TEH INTERNETZ, more formally known as **a remote server**.
+
+HOGENT has a partnership with Combell where, as a student, you have 50 gigabytes of web space at your disposal for a period of 3 years. If you want to make use of it, you can do so by following the steps below:
+ 
+1. Surf to www.academicsoftware.eu
+2. Log in with your HOGENT account
+3. Select 'Web hosting Combell'
+4. Click on the Request button in the upper right-hand corner of the 'Licence' section to obtain a product code.
+5. Make a note of this code and follow the instructions to create a personal Combell account.
+ 
+With the product code, you can create a free account, provided that you use a BE domain name.
