@@ -1,3 +1,38 @@
+TOC
+	- [HTML elements, tags and attributes](#html-elements-tags-and-attributes)
+		- [Elements and tags](#elements-and-tags)
+		- [Attributes](#attributes)
+	- [Looking at the HTML of a website](#looking-at-the-html-of-a-website)
+	- [Hierarchical relations between elements](#hierarchical-relations-between-elements)
+	- [Whitespace in HTML documents](#whitespace-in-html-documents)
+	- [Organizing files](#organizing-files)
+	- [Rules for filenames](#rules-for-filenames)
+	- [URL's](#urls)
+		- [Absolute URL's:](#absolute-urls)
+		- [Relative URL's:](#relative-urls)
+	- [Basic structure of an HTML document](#basic-structure-of-an-html-document)
+		- [Doctype](#doctype)
+		- [`<html>`](#html)
+		- [`<head>`](#head)
+		- [`<body>`](#body)
+	- [How to check if your HTML is correct?](#how-to-check-if-your-html-is-correct)
+	- [Exercise: fix a badly made HTML page](#exercise-fix-a-badly-made-html-page)
+	- [Commonly used HTML elements](#commonly-used-html-elements)
+		- [Inline vs block-level elements](#inline-vs-block-level-elements)
+		- [Headings](#headings)
+		- [Paragraphs and breaks](#paragraphs-and-breaks)
+		- [Lists](#lists)
+		- [Images](#images)
+		- [Links](#links)
+		- [Comments](#comments)
+		- [Entities](#entities)
+		- [Text formatting](#text-formatting)
+		- [Tables](#tables)
+		- [Structural elements](#structural-elements)
+	- [Exercise: turn some content into a website](#exercise-turn-some-content-into-a-website)
+	- [Homework](#homework)
+
+
 # HTML
 
 - = Hypertext Markup Language
@@ -204,7 +239,7 @@ If you want to link from `about.html` to `welcome.html`, you use the URL `../wel
 
 You can repeat `..` as many times as necessary, for example: `../../../my_page.html`.
 
-### Basic structure of an HTML document
+## Basic structure of an HTML document
 
 This is a minimal HTML page:
 
@@ -258,7 +293,7 @@ This is a minimal HTML page:
 - Copy and paste the HTML and click 'Check'.
 - Read the results and fix any errors.
 
-### Exercise: fix a badly made HTML page
+## Exercise: fix a badly made HTML page
 
 - You will fix a badly made HTML document. There are many errors: invalid nesting, missing elements, ...
 - [Download the exercise](https://raw.githubusercontent.com/theBlackBoxSociety/HTML-CSS-tutorial/main/exercises/fix_incorrect_html/index.html) (Right-click and select 'Save link as')
