@@ -1,5 +1,5 @@
 <details>
-<summary>Table of content - click to expand!</summary>
+<summary>Contents - click to expand!</summary>
 
 - [HTML elements, tags and attributes](#html-elements-tags-and-attributes)
 	- [Elements and tags](#elements-and-tags)

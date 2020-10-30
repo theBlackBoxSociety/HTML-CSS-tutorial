@@ -1,3 +1,6 @@
+<details>
+<summary>Contents - click to expand!</summary>
+
 - [What can you do with CSS?](#what-can-you-do-with-css)
 - [CSS files](#css-files)
 - [Rules](#rules)
@@ -34,7 +37,7 @@
 		- [Using commonly available fonts](#using-commonly-available-fonts)
 		- [Using a font service](#using-a-font-service)
 - [Exercise: styling a website](#exercise-styling-a-website)
-
+</details>
 
 # CSS
 

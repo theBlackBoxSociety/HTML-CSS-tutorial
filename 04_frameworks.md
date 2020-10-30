@@ -1,4 +1,4 @@
-Note: this is unfinished.
+**Note: this is unfinished.**
 
 # What is a CCS Framework?
 
