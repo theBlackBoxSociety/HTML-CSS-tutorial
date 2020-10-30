@@ -10,6 +10,8 @@ Note: this is unfinished.
 
 # Possible frameworks
 
+- simple https://andybrewer.github.io/mvp/
+- https://bulma.io/
 - https://getbootstrap.com
 - https://tailwindcss.com
 - https://foundation.zurb.com

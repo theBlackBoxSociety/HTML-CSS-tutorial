@@ -1,3 +1,4 @@
+<sub><sup>
 - [HTML elements, tags and attributes](#html-elements-tags-and-attributes)
 	- [Elements and tags](#elements-and-tags)
 	- [Attributes](#attributes)
@@ -30,7 +31,7 @@
 	- [Structural elements](#structural-elements)
 - [Exercise: turn some content into a website](#exercise-turn-some-content-into-a-website)
 - [Homework](#homework)
-
+</sub></sup>
 
 # HTML
 
