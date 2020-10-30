@@ -1,5 +1,3 @@
-# HTML
-
 <details>
 <summary>Table of content - click to expand!</summary>
 
