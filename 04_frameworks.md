@@ -10,11 +10,32 @@
 
 # Possible frameworks
 
-- simple https://andybrewer.github.io/mvp/
+Small
+
+- https://andybrewer.github.io/mvp/
+
+- https://purecss.io/
+
+- https://milligram.io/
+
+- https://jenil.github.io/chota/
+
+  Medium
+
+- https://minicss.org/
+
+  Large
+
 - https://bulma.io/
+
+  
+
 - https://getbootstrap.com
+
 - https://tailwindcss.com
+
 - https://foundation.zurb.com
+
 - 
 
 Many companies, apps, ... also have their own framework.
