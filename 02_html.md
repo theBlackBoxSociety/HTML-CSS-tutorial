@@ -35,9 +35,9 @@
 - [Exercise: turn some content into a website](#exercise-turn-some-content-into-a-website)
 - [Homework](#homework)
 </details>
-- - - - - - - - - -
+
 # HTML
-- - - - - - - - - -
+
 - or Hypertext Markup Language
 - meaning and structure: paragraphs, lists, tables, links, ...
 - hypertext: links connect pages
