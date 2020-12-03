@@ -24,30 +24,29 @@ On desktop:
 - Chrome (Windows + Mac): 70%
 - Firefox (Windows + Mac): 8%
 - Safari (Mac only): 8%
-- rest: Edge (Windows only), Internet Explorer (Windows only), Opera (Windows + Mac), ...
+- others: Edge (Windows only), Internet Explorer (Windows only), Opera (Windows + Mac), ...
 See https://gs.statcounter.com/browser-market-share/desktop/worldwide.
 
 On mobile:    
-- Chrome (iOS + Android): 61% + 7% (Samsung Internet) = 68% 
+- Chrome (iOS + Android): 68%
 - Safari (iOS): 20%
 See https://gs.statcounter.com/browser-market-share/mobile/worldwide.
 
 See https://gs.statcounter.com for more statistics.
 
 ## Text / Code editor
-You are free to choose. 
+You are free to choose.
 
 Recommendations:
- 
-- https://atom.io
-- http://brackets.io
-- https://www.sublimetext.com
+- [Atom](https://atom.io)
+- [brackets](http://brackets.io)
+- [sublimetext](https://www.sublimetext.com)
 
 Pick one editor and learn it well, especially the shortcuts. I'll be using Atom in class.
 
 
 ## FTP Client
-Again free to choose. 
+Again free to choose.
 
 Recommendations:
 - [Cyberduck](https://cyberduck.io/) (windows & OSX)
@@ -58,11 +57,11 @@ It's common that your workflow will consist of testing and running locally (on y
 
 
 HOGENT has a partnership with Combell where, as a student, you have 50 gigabytes of web space at your disposal for a period of 3 years. If you want to make use of it, you can do so by following the steps below:
- 
+
 1. Surf to www.academicsoftware.eu
 2. Log in with your HOGENT account
 3. Select 'Web hosting Combell'
 4. Click on the Request button in the upper right-hand corner of the 'Licence' section to obtain a product code.
 5. Make a note of this code and follow the instructions to create a personal Combell account.
- 
-With the product code, you can create a free account, provided that you use a BE domain name.
+
+With the product code, you can create a free account, provided that you use a **BE** domain name.

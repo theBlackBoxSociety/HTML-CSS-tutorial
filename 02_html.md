@@ -1,5 +1,5 @@
 <details>
-<summary>Contents - click to expand!</summary>
+<summary>Table of Contents - click to expand!</summary>
 
 - [HTML elements, tags and attributes](#html-elements-tags-and-attributes)
 	- [Elements and tags](#elements-and-tags)
@@ -18,26 +18,27 @@
 	- [`<head>`](#head)
 	- [`<body>`](#body)
 - [How to check if your HTML is correct?](#how-to-check-if-your-html-is-correct)
-- [Exercise: fix a badly made HTML page](#exercise-fix-a-badly-made-html-page)
 - [Commonly used HTML elements](#commonly-used-html-elements)
 	- [Inline vs block-level elements](#inline-vs-block-level-elements)
 	- [Headings](#headings)
 	- [Paragraphs and breaks](#paragraphs-and-breaks)
 	- [Lists](#lists)
-	- [Images](#images)
 	- [Links](#links)
 	- [Comments](#comments)
-	- [Entities](#entities)
 	- [Text formatting](#text-formatting)
+	- [Images](#images)
+	- [Videos](#videos)
+	- [Sounds](#sounds)
 	- [Tables](#tables)
 	- [Structural elements](#structural-elements)
+	- [Entities](#entities)
 - [Exercise: turn some content into a website](#exercise-turn-some-content-into-a-website)
 - [Homework](#homework)
 </details>
 
 # HTML
 
-- = Hypertext Markup Language
+- or Hypertext Markup Language
 - meaning and structure: paragraphs, lists, tables, links, ...
 - hypertext: links connect pages
 - markup: syntax to give meaning to content
@@ -49,9 +50,8 @@
 ### Elements and tags
 
 - HTML elements are the building blocks of HTML pages.
-- `<p>`, `<table>`, ...
-- +- 100 different elements
-- Naming is important: an element is not the same as a tag.
+- `<p>`, `<h1>, `<table>`, ...
+- [+-100 different elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
 
 Start and end tags:
 
@@ -66,17 +66,19 @@ Tag names:
 - Tags have names, for example the name of the `<p>` tag is `p`.
 - The names are not case-sensitive, but lowercase is more common.
 
-Overview of all HTML tags: https://developer.mozilla.org/en-US/docs/Web/HTML/Element
+[Overview of all HTML tags](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
 
 ### Attributes
 
 - Some elements have attributes.
 - Attributes are used to add extra info to an element.
 - For example: `<img src="logo.png">`. The `<img>` element requires a `src` (source) attribute to let the browser know which image to load.
-- Attribute always have the form `name="value"`. You can also use single quotes, but double quotes are more common.
+- Attribute always have the form `name="value"`.
 - Attributes always appear at the start tag, never at the end tag.
 - Some attributes are required, while others are optional. For example: the `src` attribute is required for an `<img>` tag. The `width` attribute for an `<img>` is optional.
 - An element can have multiple attributes, separated by a space. The order is not important. For example: `<img src="logo.png" width="100" height="200">`.
+
+[Overview of all HTML attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes)
 
 ## Looking at the HTML of a website
 
@@ -90,13 +92,13 @@ You can look at the HTML of any page and see how it's made:
 Elements can contain other elements. For example:
 
 ```html
-<p>This is some text, and this is in <b>bold</b>.</p>
+<p>This is some text, and this is in <strong>bold</strong>.</p>
 ```
 
 The nesting can go deeper:
 
 ```html
-<p>This is some text, and this is in <b><i>bold and in italics</i></b>.</p>
+<p>This is some text, and this is in <strong><em>bold and in italics</em></strong>.</p>
 ```
 
 We can also reformat this to show the hierarchy more clearly:
@@ -104,23 +106,23 @@ We can also reformat this to show the hierarchy more clearly:
 ```html
 <p>
     This is some text, and this is in
-        <b>
-            <i>
+        <strong>
+            <em>
                 bold and in italics
-            </i>
-        </b>
+            </em>
+        </strong>
     .
 </p>
 ```
 
 Now it's more clear that there are 3 levels in piece of HTML, with a hierarchy between them. This will be important later when we talk about CSS.
 
-There are rules about which sub-elements an element can contain. For example, a `<p>` can contain `<b>` and `<i>` elements, but not a `<table>` element.
+There are rules about which sub-elements an element can contain. For example, a `<p>` can contain `<strong>` and `<em>` elements, but not a `<table>` element.
 
 Elements must also be properly nested. This is wrong for example:
 
 ```html
-<b><i>bold and in italics</b></i>
+<strong><em>bold and in italics</strong></em>
 ```
 
 The element that is opened last has to be closed first.
@@ -195,33 +197,32 @@ No fixed rules. Typical directory structure of a website:
 
 ## Rules for filenames
 
-HTML documents typically use the extension `.htm` or `.html`. The last one is more common.
+HTML documents typically use the extension `.html` or `.htm`.
 
 The following rules apply to HTML documents, and other files, like images, CSS, JS, ...:
-
-- It's best to avoid spaces in filenames. Use a dash `-` or an underscore `_` instead. Reason: spaces are not allowed in URL's.
-- Use lowercase for filenames. Reason: the server your site is on might be case-sensitive, meaning: `Index.html` and `index.html` are two different documents. This could mean that your site works on your computer, but that links and images are broken when you put it online. Avoid confusion by using lowercase everywhere.
+- It's best to avoid spaces in filenames. Use a dash `-` or an underscore `_` instead. Spaces are not allowed in URL's.
+- Use lowercase for filenames. The server of your site might be case-sensitive, meaning: `Index.html` and `index.html` are two different documents. This could mean that your site works on your computer, but that links and images are broken when you put it online. Avoid confusion by using lowercase everywhere.
 
 ## URL's
 
-URL's are used for links, images, ...
-
-A URL can absolute or relative.
+URL's are used for links, images, ...    
+A URL can **absolute** or **relative**.
 
 ### Absolute URL's:
 
-- For example: `https://google.be`, `https://kask.be/img/logo.png`, `http://mysite.com/js/app.js`, ...
-- Start with `http://` or with `https://`.
-- Advantage: they work everywhere. You can move your HTML document to another directory, another server, ... and the URL will still work.
-- Disadvantage: a lot of repetition and typing.
+- For example: `https://google.be`, `https://kask.be/img/logo.png`, `http://mysite.com/js/script.js`, ...
+- Start with `http://` or `https://`.
+- But do not use URL's starting with `file:///` as this only works on your computer.
+- Use them only to link to pages and files outside your own website.
+
 
 ### Relative URL's:
 
 - For example: `about_us.html`, `img/logo.png`, `/`, `../data/projects.json`, ...
 - Don't start with http:// or with https://.
 - They only work in a specific place - they are relative to a document. If you move the document to another directory, the links won't work anymore.
-- Advantage: relative URL's are shorter and more flexible. If you change the domain name of your site, then you have to change the relative URL's.
-- Disadvantage: if you move a page, you have to update all the links pointing to that page.
+- Advantage: relative URL's are shorter and more flexible. E.g. if you change the domain name of your site, you don't have to change the relative URL's.
+- Disadvantage: if you move a page or file, you have to update all the links pointing to that page or file.
 
 You need to include the path to the file you want. For example, suppose you have the following directory structure:
 
@@ -231,13 +232,13 @@ You need to include the path to the file you want. For example, suppose you have
 
 If you want to include `logo.png` in `index.html`, you would use the URL `img/logo.png`.
 
-You can use `..` to mean 'one directory up'. For example, suppose you have this directory structure:
+You can use `..` to step 'one directory up'. For example, suppose you have this directory structure:
 
-- `welcome.html`
-- `pages/`
-    - `about.html`
+- `index.html`
+- `projects/`
+    - `project_one.html`
 
-If you want to link from `about.html` to `welcome.html`, you use the URL `../welcome.html`.
+If you want to link from `project_one.html` to `index.html`, you use the URL `../index.html`.
 
 You can repeat `..` as many times as necessary, for example: `../../../my_page.html`.
 
@@ -280,8 +281,8 @@ This is a minimal HTML page:
 - Most important: the `<title>` of the document.
 - The title appears in the title bar of the browser window, and is used when you save a bookmark, or save the page.
 - It's also very important for search engines. The title is used in the search results. Also, search engine will use the text of the `<title>` to rank search results. It's very important for SEO to give good titles to pages, and to make them unique.
-- `<meta charset="utf-8">` means: use the UTF-8 character set, which allows you to use characters from most languages (including Chinese, Japanese, ...)
-- Other things that can appear in the `<head>` element: references to stylesheets, reference to the favicon, ...
+- `<meta charset="utf-8">` means: use the UTF-8 character set, which allows you to use characters from most languages (including Cyrillic, Japanese, ...)
+- Other things that can appear in the `<head>` element: references to stylesheets, a favicon, ...
 
 ### `<body>`
 
@@ -294,13 +295,6 @@ This is a minimal HTML page:
 - Click on the tab 'Validate by Direct Input'.
 - Copy and paste the HTML and click 'Check'.
 - Read the results and fix any errors.
-
-## Exercise: fix a badly made HTML page
-
-- You will fix a badly made HTML document. There are many errors: invalid nesting, missing elements, ...
-- [Download the exercise](https://raw.githubusercontent.com/theBlackBoxSociety/HTML-CSS-tutorial/main/exercises/fix_incorrect_html/index.html) (Right-click and select 'Save link as')
-- Check if your document is valid on https://validator.w3.org.
-- Keep working on it until the validator says you have no errors and warnings.
 
 ## Commonly used HTML elements
 
@@ -316,14 +310,14 @@ Block-level elements:
 
 Inline elements:
 
-- examples: `<b>`, `<i>`, `<img>`, ...
+- examples: `<strong>`, `<em>`, `<img>`, ...
 - can be part of a line of text
 - do no start a new line
 
 ### Headings
 
 - `<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, `<h6>`
-- These are block-level elements.
+- Are block-level elements.
 - `<h1>` = most important title
 - `<h2>` = subtitle
 - Use headings to indicate the logical levels in your text.
@@ -331,14 +325,14 @@ Inline elements:
 ### Paragraphs and breaks
 
 - `<p>This is a paragraph.<p>`
+- Are block level elements.
 - Use a break `<br>` to create a new line in a paragraph.
-- Paragraphs are block level elements.
 
 ### Lists
 
 - Very common. Also used for navigation items.
 - Can be ordered (with a numbering) and unordered (no numbering).
-- Lists are block level elements.
+- Are block level elements.
 
 Unordered:
 
@@ -375,25 +369,14 @@ Lists can also be nested:
 </ol>
 ```
 
-### Images
-
-- ```<img src="path_to_image" alt="alternative text for image">```
-- The `src` attribute is required.
-- Use relative paths for loading images within your website and absolute paths to link to an image on another website.
-- `alt` attribute: a textual description of the image. This is very important to make your website accessible to anyone, including the visually impaired. A screen reader will read out the value of this attribute. It can also be used by search engines (they can't understand what's in the image).
-- You can omit the description within the `alt` attribute if the image you are using is decorative and has no 'real meaning', for example a drop shadow, a separator, ...
-- Images are inline level elements.
-- Browsers support GIF, JPEG, PNG and SVG. You will need to convert other file formats to a supported format first, or the browser will not show it.
-
 ### Links
 
-- `<a href="path_to_link">content that is looks like a  link</a>`
+- `<a href="path_to_link">content that is a link</a>`
 - `<a>` stands for 'anchor'
 - The `href` ('hypertext reference') attribute is required.
-- Use relative paths for linking files within your website and absolute path to link  to external resources and websites.
-- `<a href="path_to_link" target="_blank">`
-- Use the attribute `target="_blank"` to let the link open in a new tab or page.
-- Links are inline level elements, so you can place a link within paragraphs, headers, lists, ...
+- Use relative paths for linking files within your website and absolute paths to link to external resources and websites.
+- `<a href="path_to_link" target="_blank">` The attribute `target="_blank"` is used to open the link in a new tab or page.
+- Are inline level elements, so you can place a link within paragraphs, headers, lists, ...
 
 Example of a simple link:
 
@@ -417,7 +400,7 @@ Linking an image:
 
 Email links:
 
-- `<a href="mailto:hendrik@kask.be">send me a mail</a>`
+- `<a href="mailto:info@kask.be">send me a mail</a>`
 - Clicking on the link will open a mail client (Outlook, Thunderbird, Apple Mail, ...)
 
 ### Comments
@@ -427,23 +410,40 @@ Email links:
 - You can use this to clarify the structure of your document.
 - Useful to temporarily hide something while working on a page.
 
-### Entities
-
-- Some characters have a special meaning.
-- For example `<` is the start of the tag.
-- We cannot use these characters directly because we would confuse the browser. We need to use 'entities'. (They need to be 'escaped'.)
-
-Common entities:
-
-- `&gt;` for `>` (`gt` stands for greater than)
-- `&lt;` for `<` (`lt` stands for lesser than)
-- `&amp;` for `&` (`amp` stands for ampersand)
-
 ### Text formatting
 
 - `<strong>`: bold
 - `<em>`: italic
 - `<hr>`: horizontal rule
+
+### Images
+
+- ```<img src="path_to_image" alt="alternative text for image">```
+- The `src` attribute is required.
+- Use relative paths for loading images within your website and absolute paths to link to an image on another website.
+- `alt` attribute: a textual description of the image. This is very important to make your website accessible to anyone, including the visually impaired. A screen reader will read out the value of this attribute. It can also be used by search engines.
+- You can omit the description within the `alt` attribute if the image you are using is decorative and has no 'real meaning', for example a drop shadow, a separator, ...
+- Are inline level elements.
+- Browsers support GIF, JPEG, PNG and SVG (vector image). You will need to convert other file formats to a supported format first, or the browser will not show it.
+
+### Videos
+
+- ```<video src="videos/kitten.mp4" controls autoplay>
+    		Sorry, your browser doesn't support embedded videos.
+		 </video>```
+- Similar as the `<img>` element a path to the video file is included with a `src` attribute.
+- Possible attributes: `width` and `height`, `autoplay` and `loop`, etc.
+- The text inside the opening and closing `<video>` `</video>` tags is shown as a fallback for browsers that don't support video.
+- The common video containers used on the web are MP4, Ogg/Ovg & WebM.
+
+### Sounds
+
+- ```<audio src="sounds/miauw.mp3" controls autoplay loop>
+            Your browser does not support the audio.
+    </audio>```
+- Again similar as `<img>` and `<video>`
+- If the attribute controls is false we don't see anything in the page.
+- The most common codec is MP3 but others as WAV and vobis will also work.
 
 ### Tables
 
@@ -482,11 +482,13 @@ Example:
 
 ### Structural elements
 
-These can help structuring your document:
+These can help structuring your document but are not necessary. Some have a specific role and others have not.
 
-- `<header>`: the top part of the page, which usually contains the main navigation, a logo, the search, ... Normally the header doesn't contains any actual content. Not to be confused with the `<head>` element.
-- `<footer>`: the bottom part of the page, which usually contains copyright info, links to social media, legal disclaimers, ... This part also doesn't contain any actual content.
+- `<header>`: the top part of the page, which usually contains the main navigation, a logo, a tagline, ...  Not to be confused with the `<head>` element.
+- `<footer>`: the bottom part of the page, which usually contains copyright info, links to social media, legal disclaimers, ...
+- `<nav>`: contains the navigation.
 - `<main>`: the actual content of the page. Use only once per page.
+- `<section>` and `<div>`: grouped content that doesn't have a more specific semantic element to represent it.
 
 Usually these elements are directly under the `<body>` element:
 
@@ -499,10 +501,16 @@ Usually these elements are directly under the `<body>` element:
     </head>
     <body>
         <header>
-            <!-- logo, navigation, search, ... -->
+            <!-- logo, tagline, ... -->
+						<nav>
+						<!-- navigation -->
+						</nav>
         </header>
         <main>
             <!-- the actual content of a page -->
+						<section>
+							<!-- grouped content -->
+						</section>
         </main>
         <footer>
             <!-- credits, copyright info, ... -->
@@ -510,11 +518,22 @@ Usually these elements are directly under the `<body>` element:
     </body>
 </html>
 ```
+### Entities
+
+- Some characters have a special meaning.
+- For example `<` is the start of the tag.
+- We cannot use these characters directly because we would confuse the browser. We need to use 'entities'. (They need to be 'escaped'.)
+
+Common entities:
+
+- `&gt;` for `>` (`gt` stands for greater than)
+- `&lt;` for `<` (`lt` stands for lesser than)
+- `&amp;` for `&` (`amp` stands for ampersand)
 
 ## Exercise: turn some content into a website
 
-- You will make a mini-website with 2 pages: a homepage and an about page.
-- Create a new, empty folder for this. Create the necessary files and directories. The images should be in a separate folder.
+- Make a mini-website with 2 or more pages.
+- Create a new, empty folder for this. Create the necessary files and directories. All media files (images) should be in a separate folder.
 - Each page should have a navigation on top, with links to the homepage, the about page, and a link to the KASK site. The logo should also be on top of every page, and it should link to the homepage. You can download the logo here: [exercises/content_to_website/This is our logo.jpeg](https://github.com/theBlackBoxSociety/HTML-CSS-tutorial/blob/main/exercises/content_to_website/This%20is%20our%20logo.jpeg) (right-click > save link as).
 - Each page should also have a footer, which mentions 'Made by your name here' and your email address. Your email address should be a link. (Yes, you will duplicate some code. It's fine for now.)
 - Remember: we work with HTML only now, and HTML is for structure, not for layout or design. For the moment it's OK if the logo and navigation are under each other instead of next to each other.

@@ -1,8 +1,8 @@
-## A webpage is like a cake with 3 layers
+## A webpage is like a 🎂 with 3 layers
 
-- [HTML](#html) = structure and content
-- [CSS](#css) = design or look and feel
-- [JavaScript](#javascript) = interaction and behaviour
+1 [HTML](#html) = structure and content
+2 [CSS](#css) = design or look and feel
+3 [JavaScript](#javascript) = interaction and behaviour
 
 Each technology has its responsibility.
 
@@ -11,16 +11,15 @@ Each technology has its responsibility.
 
 - The bottom layer.
 - This layer is all about structure, semantics, meaning.
-- Use HTML to tell people and machines how the page is structured.
+- Used to tell people and machines how the page is structured.
 
 
 Examples:
-
 - `<h1>` = this is the most important title
 - `<h2>` = this is a subtitle
 - `<p>` = just a paragraph
 
-- HTML is very important for machines (software, computers):
+- HTML is very important for machines (software, computers).
 - If HTML is used properly, a search engine (like Google) can understand the structure of the document. For example, if the search engine sees `<h1>` tags, it know that this text is important.
 
 You can easily abuse HTML and use it for design. A classic bad example is using HTML tables to make columns in the page.
