@@ -1,5 +1,5 @@
 <details>
-<summary>Contents - click to expand!</summary>
+<summary>Table of Contents - click to expand!</summary>
 
 - [What can you do with CSS?](#what-can-you-do-with-css)
 - [CSS files](#css-files)
@@ -56,8 +56,8 @@
 
 - Usually, CSS rules are placed in separate files, commonly called 'stylesheets'.
 - These files have the extension `.css`.
-- You can choose the filename, but common names are `app.css`, `style.css`, `styles.css`, ... 
-- You need tell an HTML document which stylesheet to use by making a reference to the CSS file in the `<head>` of the document: `<link rel="stylesheet" href="css/styles.css">` 
+- You can choose the filename, but common names are `app.css`, `style.css`, `styles.css`, ...
+- You need tell an HTML document which stylesheet to use by making a reference to the CSS file in the `<head>` of the document: `<link rel="stylesheet" href="css/styles.css">`
 
 For example:
 
@@ -67,7 +67,7 @@ For example:
     <head>
         <meta charset="utf-8">
         <title>This is the title</title>
-        <link rel="stylesheet" href="css/styles.css"> 
+        <link rel="stylesheet" href="css/styles.css">
     </head>
     <body>
         <h1>Hello world</h1>
@@ -93,7 +93,7 @@ selector {
     property: value;
     another-property: value;
 }
-``` 
+```
 
 - The *selector* determines to what part of the HTML document the rule will apply.
 - The *declaration block* is list of one or more declarations.
@@ -109,7 +109,7 @@ p {
     color: blue;
     background-color: red;
 }
-``` 
+```
 
 - The selector is `p`.
 - The declaration block is everything between `{` and `}`.
@@ -117,7 +117,7 @@ p {
 
 The order of the declarations does not matter. We could have listed `background-color` first and the result would have been the same.
 
-### Exercise: linking a CSS file to an HTML document 
+### Exercise: linking a CSS file to an HTML document
 
 - Create a new directory called `css-tutorial`.
 - Create an HTML document in this directory. Name it `index.html`.
@@ -144,9 +144,9 @@ The order of the declarations does not matter. We could have listed `background-
 ### Tag selectors
 
 - Easiest to understand.
-- Example: `p`, `h1`, ... 
+- Example: `p`, `h1`, ...
 - These apply a rule to all elements with a specific tag name.
-- Useful for defining the overall appearance of links, headers, paragraphs, ... 
+- Useful for defining the overall appearance of links, headers, paragraphs, ...
 
 For example:
 
@@ -154,7 +154,7 @@ For example:
 p {
     color: blue;
 }
-``` 
+```
 
 This will make all paragraphs blue.
 
@@ -173,23 +173,23 @@ For example if you apply this CSS:
 body {
     color: blue;
 }
-``` 
+```
 
 To this HTML:
 
 ```html
 ...
 <body>
-   <p>Hello</p> 
+   <p>Hello</p>
 </body>
 ...
-``` 
+```
 
 Then the paragraph will also be blue, because it is inside the `<body>` element.
- 
-Remember: 
 
-- HTML is like a tree structure, with hierarchical relations between elements (an element can contain other elements). 
+Remember:
+
+- HTML is like a tree structure, with hierarchical relations between elements (an element can contain other elements).
 - The CSS you apply to a 'higher' element will also apply to the 'lower' elements.
 
 Most CSS properties work like this: colors, fonts, ... But there are exceptions: for example margins.
@@ -208,7 +208,7 @@ You can group selectors by using comma's. For example:
 p, h1, h2 {
     color: blue;
 }
-``` 
+```
 
 This will apply the rules in the declaration to all elements of the group. You can combine this with other rules. For example:
 
@@ -224,7 +224,7 @@ h1 {
 h2 {
     background-color: yellow;
 }
-``` 
+```
 
 #### Exercise
 
@@ -239,7 +239,7 @@ Use a space to indicate that you want to select elements appearing inside other 
 p a {
     color: green;
 }
-``` 
+```
 
 #### Exercise
 
@@ -265,7 +265,7 @@ For example, suppose you want to change the look of the first paragraph in this 
 <p>
     And another one.
 </p>
-``` 
+```
 
 Note that we added an attribute `class="intro"` to the first paragraph. This allows us to target it with CSS rules. For example, if we want to indent the first paragraph:
 
@@ -280,7 +280,7 @@ You are free to choose the name of the class, but there are some rules:
 - The name can only contain letters and digits.
 - Spaces are not allowed inside class names. Spaces can be used to add multiple classes to the same element. For example: `class="intro promotional-text"` gives the element 2 classes: intro, and promotional-text.
 - Use a dash `-` or and `_` to create word breaks inside a class name.
-- It's best to use structural, semantic names that have nothing to do with the visual properties of an element, for example: better `intro` rather than `big-text`, or `blue-text`. If you decide to change the color of the text later on, the name `blue-text` might become confusing. 
+- It's best to use structural, semantic names that have nothing to do with the visual properties of an element, for example: better `intro` rather than `big-text`, or `blue-text`. If you decide to change the color of the text later on, the name `blue-text` might become confusing.
 
 Once you added a `class` attribute, you can target it in the CSS by adding a period `.` in front of the name:
 
@@ -288,9 +288,9 @@ Once you added a `class` attribute, you can target it in the CSS by adding a per
 .intro {
     color: green;
 }
-``` 
+```
 
-You can re-use the `class`, and not only with paragraphs. For example: `<h1 class="intro">` would also work. 
+You can re-use the `class`, and not only with paragraphs. For example: `<h1 class="intro">` would also work.
 
 Tag names and class names can be combined, for example:
 
@@ -298,7 +298,7 @@ Tag names and class names can be combined, for example:
 p.intro {
     color: green;
 }
-``` 
+```
 
 This means: apply the rule to `<p>` elements that have the class intro, but not to other elements, like headings.
 
@@ -316,7 +316,7 @@ For example, to change the color of a link when hovering over it:
 a:hover {
     color: green;
 }
-``` 
+```
 
 See https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes for more pseudo-classes.
 
@@ -334,19 +334,19 @@ Example:
 
 ```html
 <h1 id="main-title">This is the main title</h1>
-``` 
+```
 
 ```css
 #main-title {
     color: green;
 }
-``` 
+```
 
 #### Exercise
 
 - Add a shopping list using a `<ul>`.
 - Give it a class `shopping-list`.
-- Make the font for the shopping list smaller using `font-size: 10px`. 
+- Make the font for the shopping list smaller using `font-size: 10px`.
 
 ### The most specific rule wins
 
@@ -369,7 +369,7 @@ For example:
         And another one.
     </p>
 </body>
-``` 
+```
 
 CSS:
 
@@ -383,7 +383,7 @@ p {
 p.intro {
     color: green;
 }
-``` 
+```
 
 What color will each element have?
 
@@ -438,7 +438,7 @@ A `<span>` is similar, but it works inline. For example:
 
 ### Exercises
 
-- Add a footer to your page using a `<div>` and a `class`. 
+- Add a footer to your page using a `<div>` and a `class`.
 - Add your name in the footer.
 - Make the text in the footer smaller.
 
@@ -456,7 +456,7 @@ https://www.w3schools.com/css/css_selectors.asp
 
 ### External stylesheets
 
-- This is what we used so far. 
+- This is what we used so far.
 - This is the most common and most useful.
 - The CSS rules are in an external, separate document.
 - The external document is linked to the HTML document with a `<link>` element in the `<head>`.
@@ -486,7 +486,7 @@ Example:
     <h1>My title</h1>
     <p>Some text.</p>
 </body>
-</html> 
+</html>
 ```
 
 ### Inline styles
@@ -520,7 +520,7 @@ Colors can be expressed in many different ways:
 
 #### RGB
 
-- RGB = red, green, blue. 
+- RGB = red, green, blue.
 - Each color is expressed as a number from 0 to 255.
 - Syntax: `rgb(red, green, blue)`.
 
@@ -553,7 +553,7 @@ p {
 - Example: FF = 255.
 - The letters can be in upper or lower case.
 - A hex value can be shortened if it is composed of 3 groups of repeating digits. For example: `#ff3344` can be shortened as `#f34`.
-- Hex values are very common. 
+- Hex values are very common.
 
 #### Color names
 
@@ -574,11 +574,11 @@ For example:
 
 ```css
 p {
-    font-size: 16px; 
+    font-size: 16px;
 }
 ```
 
-The font size is expressed in pixels here. `px` is the symbol for the pixels unit. 
+The font size is expressed in pixels here. `px` is the symbol for the pixels unit.
 
 Common units with their symbols:
 
@@ -655,7 +655,7 @@ They work the same as `border`.
 
 ### `margin` and `padding`
 
-These properties are used to control the whitespace around an element. Margin and padding are not the same. 
+These properties are used to control the whitespace around an element. Margin and padding are not the same.
 
 - padding = the space between the content of the element and the border
 - margin = the space between the border and the rest of the document
@@ -706,7 +706,7 @@ p {
 - `text-align`: `left`, `right`, `center`
 - `text-decoration`: `underline`, `none` (useful to remove the standard underlining of links)
 - `text-transform`: `uppercase`, `lowercase`, ...
-- `line-height`: space between lines. 1 is standard. > 1 = more space. 
+- `line-height`: space between lines. 1 is standard. > 1 = more space.
 - `font-weight`: `bold`, `normal`, ...
 
 ### Fonts
@@ -761,7 +761,7 @@ p {
 For example, for Roboto, you would add this in the `<head>`:
 
 ```html
-<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 ```
 
 And then, if you want to use it as the default font, you would add this to your CSS:
