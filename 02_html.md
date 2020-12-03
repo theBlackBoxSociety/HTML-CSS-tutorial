@@ -506,15 +506,15 @@ Usually these elements are directly under the `<body>` element:
     <body>
         <header>
         <!-- logo, tagline, ... -->
-		<nav>
-			<!-- navigation -->
-		</nav>
+	<nav>
+	<!-- navigation -->
+	</nav>
         </header>
         <main>
         <!-- the actual content of a page -->
-				<section>
-					<!-- grouped content -->
-				</section>
+	<section>
+	<!-- grouped content -->
+	</section>
         </main>
         <footer>
         <!-- credits, copyright info, ... -->
