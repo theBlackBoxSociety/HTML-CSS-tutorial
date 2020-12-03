@@ -1,8 +1,8 @@
 ## A webpage is like a 🎂 with 3 layers
 
-1 [HTML](#html) = structure and content
-2 [CSS](#css) = design or look and feel
-3 [JavaScript](#javascript) = interaction and behaviour
+1. [HTML](#html) = structure and content
+2. [CSS](#css) = design or look and feel
+3. [JavaScript](#javascript) = interaction and behaviour
 
 Each technology has its responsibility.
 

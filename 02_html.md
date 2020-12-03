@@ -51,22 +51,21 @@
 
 - HTML elements are the building blocks of HTML pages.
 - `<p>`, `<h1>, `<table>`, ...
-- [+-100 different elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
+- +-100 different elements  
 
-Start and end tags:
-
+Start and end tags:    
 - An element usually has a start and end tag, an opening and closing tag.
 - For example: `<p>` and `</p>`.
 - A start (= opening) tag starts with `<` and ends with `>`.  
 - An end (= closing) tag starts with `</` and ends with `>`.
-- Not all tags have closing tags. For example: `<br>`, a break, or a new line. Another example: `<img>`.
+- Not all tags have closing tags. For example: `<br>`, a break, or a new line. Another example: `<img>`.    
 
 Tag names:
-
 - Tags have names, for example the name of the `<p>` tag is `p`.
 - The names are not case-sensitive, but lowercase is more common.
 
 [Overview of all HTML tags](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
+
 
 ### Attributes
 
@@ -85,7 +84,7 @@ Tag names:
 You can look at the HTML of any page and see how it's made:
 
 - In most browsers, you can right-click on an element, and then select 'Inspect element'. A panel will open and show you the source of that element.
-- You can see the entire HTML source of a webpage by right-clicking on the page in your browser, and then select 'View page source'.
+- You can see the entire HTML source of a webpage by right-clicking on the page in your browser, and then select 'View page source' or shortcut **ctrl/cmd + u**
 
 ## Hierarchical relations between elements
 
@@ -197,9 +196,9 @@ No fixed rules. Typical directory structure of a website:
 
 ## Rules for filenames
 
-HTML documents typically use the extension `.html` or `.htm`.
+HTML documents typically use the extension `.html` or `.htm`
 
-The following rules apply to HTML documents, and other files, like images, CSS, JS, ...:
+The following rules apply to HTML documents, and other files, like images, css, js, ...:
 - It's best to avoid spaces in filenames. Use a dash `-` or an underscore `_` instead. Spaces are not allowed in URL's.
 - Use lowercase for filenames. The server of your site might be case-sensitive, meaning: `Index.html` and `index.html` are two different documents. This could mean that your site works on your computer, but that links and images are broken when you put it online. Avoid confusion by using lowercase everywhere.
 
@@ -222,7 +221,7 @@ A URL can **absolute** or **relative**.
 - Don't start with http:// or with https://.
 - They only work in a specific place - they are relative to a document. If you move the document to another directory, the links won't work anymore.
 - Advantage: relative URL's are shorter and more flexible. E.g. if you change the domain name of your site, you don't have to change the relative URL's.
-- Disadvantage: if you move a page or file, you have to update all the links pointing to that page or file.
+- Disadvantage: if you move a page or file, you have to update all the links pointing to that page or file.    
 
 You need to include the path to the file you want. For example, suppose you have the following directory structure:
 
@@ -306,7 +305,7 @@ Block-level elements:
 
 - examples: `<p>`, `<h1>`, `<table>`, ...
 - begin on a new line
-- take up the full width of their parent element
+- take up the full width of their parent element    
 
 Inline elements:
 
@@ -418,7 +417,7 @@ Email links:
 
 ### Images
 
-- ```<img src="path_to_image" alt="alternative text for image">```
+`<img src="path_to_image.jpg" alt="alternative text for image">`
 - The `src` attribute is required.
 - Use relative paths for loading images within your website and absolute paths to link to an image on another website.
 - `alt` attribute: a textual description of the image. This is very important to make your website accessible to anyone, including the visually impaired. A screen reader will read out the value of this attribute. It can also be used by search engines.
@@ -428,9 +427,11 @@ Email links:
 
 ### Videos
 
-- ```<video src="videos/kitten.mp4" controls autoplay>
-    		Sorry, your browser doesn't support embedded videos.
-		 </video>```
+```html
+<video src="videos/kitten.mp4" controls autoplay>
+	Sorry, your browser doesn't support embedded videos.
+</video>
+```
 - Similar as the `<img>` element a path to the video file is included with a `src` attribute.
 - Possible attributes: `width` and `height`, `autoplay` and `loop`, etc.
 - The text inside the opening and closing `<video>` `</video>` tags is shown as a fallback for browsers that don't support video.
@@ -438,9 +439,11 @@ Email links:
 
 ### Sounds
 
-- ```<audio src="sounds/miauw.mp3" controls autoplay loop>
-            Your browser does not support the audio.
-    </audio>```
+```html
+<audio src="sounds/miauw.mp3" controls autoplay loop>
+	Your browser does not support the audio.
+</audio>
+```
 - Again similar as `<img>` and `<video>`
 - If the attribute controls is false we don't see anything in the page.
 - The most common codec is MP3 but others as WAV and vobis will also work.
@@ -501,19 +504,19 @@ Usually these elements are directly under the `<body>` element:
     </head>
     <body>
         <header>
-            <!-- logo, tagline, ... -->
-						<nav>
-						<!-- navigation -->
-						</nav>
+        <!-- logo, tagline, ... -->
+					<nav>
+					<!-- navigation -->
+					</nav>
         </header>
         <main>
-            <!-- the actual content of a page -->
-						<section>
-							<!-- grouped content -->
-						</section>
+        <!-- the actual content of a page -->
+					<section>
+					<!-- grouped content -->
+					</section>
         </main>
         <footer>
-            <!-- credits, copyright info, ... -->
+        <!-- credits, copyright info, ... -->
         </footer>
     </body>
 </html>
