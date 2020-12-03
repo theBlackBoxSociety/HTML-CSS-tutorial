@@ -22,10 +22,10 @@
 	- [Inline vs block-level elements](#inline-vs-block-level-elements)
 	- [Headings](#headings)
 	- [Paragraphs and breaks](#paragraphs-and-breaks)
+	- [Text formatting](#text-formatting)
+	- [Comments](#comments)
 	- [Lists](#lists)
 	- [Links](#links)
-	- [Comments](#comments)
-	- [Text formatting](#text-formatting)
 	- [Images](#images)
 	- [Videos](#videos)
 	- [Sounds](#sounds)
@@ -327,6 +327,19 @@ Inline elements:
 - Are block level elements.
 - Use a break `<br>` to create a new line in a paragraph.
 
+### Text formatting
+
+- `<strong>`: bold
+- `<em>`: italic
+- `<hr>`: horizontal rule
+
+### Comments
+
+- `<!-- some comment  -->`
+- Never shown by the browser.
+- You can use this to clarify the structure of your document.
+- Useful to temporarily hide something while working on a page.
+
 ### Lists
 
 - Very common. Also used for navigation items.
@@ -402,18 +415,6 @@ Email links:
 - `<a href="mailto:info@kask.be">send me a mail</a>`
 - Clicking on the link will open a mail client (Outlook, Thunderbird, Apple Mail, ...)
 
-### Comments
-
-- `<!-- some comment  -->`
-- Never shown by the browser.
-- You can use this to clarify the structure of your document.
-- Useful to temporarily hide something while working on a page.
-
-### Text formatting
-
-- `<strong>`: bold
-- `<em>`: italic
-- `<hr>`: horizontal rule
 
 ### Images
 
@@ -505,15 +506,15 @@ Usually these elements are directly under the `<body>` element:
     <body>
         <header>
         <!-- logo, tagline, ... -->
-					<nav>
+				<nav>
 					<!-- navigation -->
-					</nav>
+				</nav>
         </header>
         <main>
         <!-- the actual content of a page -->
-					<section>
+				<section>
 					<!-- grouped content -->
-					</section>
+				</section>
         </main>
         <footer>
         <!-- credits, copyright info, ... -->
