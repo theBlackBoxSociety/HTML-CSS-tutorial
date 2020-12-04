@@ -488,13 +488,15 @@ Example:
 
 These can help structuring your document but are not necessary. Some have a specific role and others have not.
 
-- `<header>`: the top part of the page, which usually contains the main navigation, a logo, a tagline, ...  Not to be confused with the `<head>` element.
-- `<footer>`: the bottom part of the page, which usually contains copyright info, links to social media, legal disclaimers, ...
-- `<nav>`: contains the navigation.
-- `<main>`: the actual content of the page. Use only once per page.
-- `<section>` and `<div>`: grouped content that doesn't have a more specific semantic element to represent it.
+- `<header>`: a block-level element at the top part of the page, which usually contains the main navigation, a logo, a tagline, ...  Not to be confused with the `<head>` element.
+- `<footer>`: a block-level element at the bottom part of the page, which usually contains copyright info, links to social media, legal disclaimers, ...
+- `<nav>`: a block-level element that contains the navigation.
+- `<main>`: a block-level element with the actual content of the page. Used only once per page.
+- `<article>`: a block-level element that represents a independent item section of content. Examples are: a forum post, a magazine or newspaper article, a blog entry.
+- `<section>`: a block-level element that groups thematic related content as chapters, .
+- `<div>`: a block-level element used to define a part of a web page. The above elements are nowadays more in use as they tell more about the content. 
+- `<span>`: an inline element used to define a part of a web page.
 
-Usually these elements are directly under the `<body>` element:
 
 ```html
 <!DOCTYPE html>     
