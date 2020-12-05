@@ -344,7 +344,7 @@ a:hover {
 }
 ```
 
-See https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes for more pseudo-classes.
+See [here](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes) for more pseudo-classes.
 
 
 #### Exercise
@@ -403,7 +403,7 @@ What color will each element have?
 - A `<div>` is a block-level element. It starts on a new line.
 - A `<span>` is a inline element. It does not start on a new line.
 - These elements are tools to group content so that you can target them with CSS. You do this by adding `class` or `div` attributes.
-- Remember the [Structural elements](#02_html.md/structural-elements) chapter in HTML.
+- Remember the [Structural elements](02_html.md/structural-elements) chapter in HTML.
 
 For example, let's say you want to have a border around a couple of paragraphs:
 
@@ -528,7 +528,7 @@ Colors can be expressed in many different ways:
 #### Color names
 
 - Browsers also understand more than 100 color names. For example: red, yellow, fuchsia, teal, cornsilk, ...
-- See https://www.w3schools.com/colors/colors_names.asp.
+- See [all 140 colors with a name](https://www.w3schools.com/colors/colors_names.asp).
 
 #### Hexadecimal values
 
@@ -611,7 +611,7 @@ You can also use `cm` (centimeter) and other units, but these don't make much se
 
 ## Commonly used properties
 
-There are hundreds of properties. See https://developer.mozilla.org/en-US/docs/Web/CSS/Reference for a complete list. Here we only mention the commonly used ones.
+There are hundreds of properties. See [a complete list](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference). Here we only mention the commonly used ones.
 
 ### `color`
 
@@ -768,7 +768,7 @@ What fonts can be used?
 3 options:
 
 1. Use fonts that everybody has, like Arial, Times, Courier, ...
-2. Use a font service, like https://fonts.google.com. Not all of them are free. Adobe also has a font service, but most of it is not free.
+2. Use a font service, like [google fonts](https://fonts.google.com). Not all of them are free. Adobe also has a font service, but most of it is not free.
 3. Send the font to the user when they visit the page. Disadvantage: the page will take a bit longer to load. Also, not all fonts licenses allow you to do this (for free).
 
 See [this Mozilla tutorial on generating and using web fonts](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Web_fonts) for more info on the third option. Here we only look at options 1 and 2.
@@ -789,7 +789,7 @@ p {
 #### Using a font service
 
 - Every service works slightly different.
-- Here we use https://fonts.google.com but there are alternatives as https://fontlibrary.org/ and https://www.fontsquirrel.com/
+- Here we use [google fonts](https://fonts.google.com) but there are alternatives as [fontlibrary](https://fontlibrary.org/) and [fontsquirrel](https://www.fontsquirrel.com/)
 - Choose a font and click on 'See specimen'.
 - For example: https://fonts.google.com/specimen/Roboto
 - Click on 'Select this font'.
