@@ -6,13 +6,13 @@
 - [Rules](#rules)
 - [Browser default stylesheet](#browser-default-stylesheet)
 - [Selectors](#selectors)
-	- [Tag selectors](#tag-selectors)
+	- [Type selectors](#type-selectors)
 	- [Inheritance](#inheritance)
 	- [Grouping selectors](#grouping-selectors)
 	- [Selecting elements inside other elements](#selecting-elements-inside-other-elements)
-	- [The `class` attribute](#the-class-attribute)
-	- [Pseudo-classes](#pseudo-classes)
-	- [The `id` attribute](#the-id-attribute)
+	- [Class selectos](#class-selectors)
+	- [Id selectors](#id-selectors)
+	- [Pseudo-class selectors](#pseudo-class-selectors)
 	- [The most specific rule wins](#the-most-specific-rule-wins)
 	- [`<div>` and `<span>`](#div-and-span)
 - [Applying CSS to HTML documents](#applying-css-to-html-documents)
@@ -21,30 +21,34 @@
 	- [Inline styles](#inline-styles)
 - [CSS syntax](#css-syntax)
 	- [Defining colors](#defining-colors)
-		- [RGB](#rgb)
-		- [Hexadecimal values](#hexadecimal-values)
 		- [Color names](#color-names)
+		- [Hexadecimal values](#hexadecimal-values)
+		- [RGB](#rgb)
 	- [Property names](#property-names)
 	- [Units](#units)
 	- [Comments](#comments)
 - [Commonly used properties](#commonly-used-properties)
 	- [`color`](#color)
 	- [`background-color`](#background-color)
+	- [`background-image`](#background-image)
 	- [`border`](#border)
 	- [`margin` and `padding`](#margin-and-padding)
 	- [Typography](#typography)
 	- [Fonts](#fonts)
 		- [Using commonly available fonts](#using-commonly-available-fonts)
 		- [Using a font service](#using-a-font-service)
+	- [Positioning](#positioning)
+	- [Transitions](#transitions)
+	- [Animations](#animations)
 - [Exercise: styling a website](#exercise-styling-a-website)
 </details>
 
 # CSS
 
-- Never use HTML for presentation, formatting or design - that's what CSS is for.
+- Never use HTML for **presentation, formatting or design** :point_right: that's what CSS is for!
 - CSS = Cascading Style Sheets
 - CSS = rules defined by you that tell the browser how to display the elements in your HTML page.
-- Very powerful, see for example https://www.w3schools.com/css/css_intro.asp. CSS can be used to transform an HTML document in many different forms.
+- Very powerful, try [this example](https://www.w3schools.com/css/css_intro.asp). CSS can be used to transform an HTML document in many different forms.
 
 ## What can you do with CSS?
 
@@ -54,9 +58,9 @@
 
 ## CSS files
 
-- Usually, CSS rules are placed in separate files, commonly called 'stylesheets'.
+- Usually, CSS rules are placed in a separate files, commonly called 'stylesheets'.
 - These files have the extension `.css`.
-- You can choose the filename, but common names are `app.css`, `style.css`, `styles.css`, ...
+- You can choose the filename, but common names are `style.css` or `styles.css`.
 - You need tell an HTML document which stylesheet to use by making a reference to the CSS file in the `<head>` of the document: `<link rel="stylesheet" href="css/styles.css">`
 
 For example:
@@ -75,7 +79,7 @@ For example:
 </html>
 ```
 
-- Usually you will have 1 stylesheet and connect that with a `<link>` element to the different pages of your site. This is powerful: you can control to look of the entire site through 1 file.
+- Usually you will have 1 stylesheet and connect that with a `<link>` element to the different pages of your site. This is powerful: you can control to look of the entire site (multiple pages) through 1 file.
 - Yes, you can have multiple stylesheets connected to the same HTML document. But in most case you'll want to keep it simple: just 1 stylesheet.
 - Sometimes there are good reasons to create multiple stylesheets. For example: one for display on screen, and one for when the page is printed (with different fonts, only grayscale to save ink, ...)
 
@@ -141,10 +145,11 @@ The order of the declarations does not matter. We could have listed `background-
 - Understanding selectors is also important for JavaScript.
 - In many cases, multiple rules can apply on an element. In that case, the most specific rule wins. This will become clear later.
 
-### Tag selectors
+### Type selectors
 
-- Easiest to understand.
-- Example: `p`, `h1`, ...
+- Also called element or tag selectors.
+- Easiest to understand and most common.
+- Example: `p`, `h1`, `a`, ...
 - These apply a rule to all elements with a specific tag name.
 - Useful for defining the overall appearance of links, headers, paragraphs, ...
 
@@ -228,8 +233,8 @@ h2 {
 
 #### Exercise
 
-- Change the default font to Arial. You can set the font like this: `font-family: Arial, sans-serif`.
-- Set the font of the headings to Courier: `font-family: Courier, monospace`.
+- Change the default font to Arial. You can set the font like this: `font-family: Arial, sans-serif;`.
+- Set the font of the headings to Courier: `font-family: Courier, monospace;`.
 
 ### Selecting elements inside other elements
 
@@ -248,10 +253,10 @@ p a {
 - Change the default color of links to yellow.
 - Set the color of links inside a paragraph to pink.
 
-### The `class` attribute
+### Class selectors
 
 - Tag selectors are useful, but in many cases you want to be more specific. For example, you want apply a rule only to some paragraphs, not to all.
-- In this case you can use the `class` attribute. This attribute can be added to any HTML element. You can then reference it in your CSS.
+- In this case you can use the **`class` attribute**. This attribute can be added to any HTML element. You can then reference it in your CSS.
 
 For example, suppose you want to change the look of the first paragraph in this HTML:
 
@@ -278,9 +283,8 @@ Note that we added an attribute `class="intro"` to the first paragraph. This all
 You are free to choose the name of the class, but there are some rules:
 
 - The name can only contain letters and digits.
-- Spaces are not allowed inside class names. Spaces can be used to add multiple classes to the same element. For example: `class="intro promotional-text"` gives the element 2 classes: intro, and promotional-text.
+- Spaces are not allowed inside class names. Spaces can be used to add multiple classes to the same element. For example: `class="intro centered-text"` gives the element 2 classes: intro, and centered-text.
 - Use a dash `-` or and `_` to create word breaks inside a class name.
-- It's best to use structural, semantic names that have nothing to do with the visual properties of an element, for example: better `intro` rather than `big-text`, or `blue-text`. If you decide to change the color of the text later on, the name `blue-text` might become confusing.
 
 Once you added a `class` attribute, you can target it in the CSS by adding a period `.` in front of the name:
 
@@ -290,7 +294,7 @@ Once you added a `class` attribute, you can target it in the CSS by adding a per
 }
 ```
 
-You can re-use the `class`, and not only with paragraphs. For example: `<h1 class="intro">` would also work.
+You can re-use the `class`, and do not only so with paragraphs. For example: `<h1 class="intro">` would also work.
 
 Tag names and class names can be combined, for example:
 
@@ -302,31 +306,9 @@ p.intro {
 
 This means: apply the rule to `<p>` elements that have the class intro, but not to other elements, like headings.
 
-### Pseudo-classes
+### Id selectors
 
-CSS has a few pseudo-classes. They work like classes, but you can't define them yourself. The browser automatically makes them available for you.
-
-In CSS, you target normal classes with a period, followed by the class name. Pseudo-classes are similar, but they are prefixed with a colon `:` instead of a period.
-
-For now, the only  one to remember is `:hover`. This pseudo-class is activated when you hover over an element with your mouse.
-
-For example, to change the color of a link when hovering over it:
-
-```css
-a:hover {
-    color: green;
-}
-```
-
-See https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes for more pseudo-classes.
-
-#### Exercise
-
-Change the color of the links when hovering.
-
-### The `id` attribute
-
-- Similar to the `class` attribute, but the value of an `id` attribute can only appear once in the page. (The same `class` can be used as much as you want in a document.)
+- Similar to the class selectors, but the value of an `id` attribute **can only appear once** in the page. (The same `class` can be used as much as you want in a document.)
 - Less used than `class`, but you might see it.
 - In CSS: use `#` before the name to target it.
 
@@ -347,6 +329,28 @@ Example:
 - Add a shopping list using a `<ul>`.
 - Give it a class `shopping-list`.
 - Make the font for the shopping list smaller using `font-size: 10px`.
+
+### Pseudo-classes
+
+- CSS has some pseudo-classes. They work like classes, but you can't define them yourself. The browser automatically makes them available for you.
+- Pseudo-classes are prefixed with a colon `:` instead of a period.
+- For now, the only one to remember is `:hover`. This pseudo-class is activated when you hover over an element with your mouse.
+
+Example, change the color of a link when hovering over it:
+
+```css
+a:hover {
+    color: green;
+}
+```
+
+See https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes for more pseudo-classes.
+
+
+#### Exercise
+
+Change the color of the links when hovering.
+
 
 ### The most specific rule wins
 
@@ -399,6 +403,7 @@ What color will each element have?
 - A `<div>` is a block-level element. It starts on a new line.
 - A `<span>` is a inline element. It does not start on a new line.
 - These elements are tools to group content so that you can target them with CSS. You do this by adding `class` or `div` attributes.
+- Remember the [Structural elements](#02_html.md/structural-elements) chapter in HTML.
 
 For example, let's say you want to have a border around a couple of paragraphs:
 
@@ -439,6 +444,7 @@ A `<span>` is similar, but it works inline. For example:
 ### Exercises
 
 - Add a footer to your page using a `<div>` and a `class`.
+- Of course you can also use the semantic tags `<footer>` for a footer <div>
 - Add your name in the footer.
 - Make the text in the footer smaller.
 
@@ -450,14 +456,14 @@ https://www.w3schools.com/css/css_selectors.asp
 
 3 different ways to apply CSS to HTML:
 
-- External stylesheets.
-- Internal stylesheets.
-- Inline CSS.
+1. External stylesheets
+2. Internal stylesheets
+3. Inline CSS
 
 ### External stylesheets
 
 - This is what we used so far.
-- This is the most common and most useful.
+- This is the most common and most useful way of working.
 - The CSS rules are in an external, separate document.
 - The external document is linked to the HTML document with a `<link>` element in the `<head>`.
 
@@ -465,7 +471,8 @@ https://www.w3schools.com/css/css_selectors.asp
 
 - The rules are inside a `<style>` element in the `<head>`.
 - Less useful, because can only be used for 1 document.
-- Best to avoid if possible. OK if you have a couple of rules that apply to only 1 document.
+- Best to avoid if possible. OK if you have a couple of rules that apply to only 1 document or if you have only one html page.
+- Code highlighting does not work.
 
 Example:
 
@@ -513,16 +520,38 @@ Colors are used for text color, backgrounds, borders, ...
 
 Colors can be expressed in many different ways:
 
-- Hexadecimal: probably the most common
-- RGB
-- Color names like lime, red, ...
-- And a series of less used methods, like CMYK, HSV, ...
+1. Color names like lime, red, ...
+2. Hexadecimal: probably the most common
+3. RGB
+4. And some less used methods, like CMYK, HSV, ...
 
-#### RGB
+#### Color names
+
+- Browsers also understand more than 100 color names. For example: red, yellow, fuchsia, teal, cornsilk, ...
+- See https://www.w3schools.com/colors/colors_names.asp.
+
+#### Hexadecimal values
+
+- or 'hex' values are most commonly used.
+- hexadecimal = 16 base instead of 10 base decimal values. 10=A, 11=B,...,15=F
+- Syntax: `#RRGGBB`, example: `#FF0000` for red.
+- Start with a `#`, a pound symbol.
+- Consist of 6 characters = 3 groups of 2 = RGB.
+- Uses RGB color model. Each color has 256 values.
+- 256 values, but the values after 99 are expressed using the letters A-F.
+- Example: FF = 255.
+- The letters can be in upper or lower case.
+- A hex value can be shortened if it is composed of 3 groups of repeating digits. For example: `#ff3344` can be shortened as `#f34`.
+
+#### RGB & RGBA
 
 - RGB = red, green, blue.
 - Each color is expressed as a number from 0 to 255.
 - Syntax: `rgb(red, green, blue)`.
+
+- RGBA = red, green, blue, alpha channel
+- The alpha channel specifies the opacity of the object.
+- = a number between 0.0 (fully transparent) and 1.0 (fully opaque).
 
 Paragraphs with red text:
 
@@ -532,33 +561,14 @@ p {
 }
 ```
 
-Paragraphs with a yellow background:
+Paragraphs with a semi transparent yellow background:
 
 ```css
 p {
-    background-color: rgb(255, 255, 0);
+    background-color: rgba(255, 255, 0, 0.5);
 }
 ```
 
-#### Hexadecimal values
-
-- Similar to RBG, but uses hexadecimal instead decimal values.
-- Shorter name: 'hex'.
-- Syntax: `#RRGGBB`.
-- Example: `#FF0000` is red.
-- Hex values start with a `#`, a pound symbol.
-- Consist of 6 characters = 3 groups of 2 = RGB.
-- Uses RGB color model. Each color has 256 values, just like with `rgb()` before.
-- 256 values, but the values after 99 are expressed using the letters A-F.
-- Example: FF = 255.
-- The letters can be in upper or lower case.
-- A hex value can be shortened if it is composed of 3 groups of repeating digits. For example: `#ff3344` can be shortened as `#f34`.
-- Hex values are very common.
-
-#### Color names
-
-- Browsers also understand more than 100 color names. For example: red, yellow, ...
-- See https://www.w3schools.com/colors/colors_names.asp.
 
 ### Property names
 
@@ -568,26 +578,31 @@ p {
 
 ### Units
 
-Many property values are expressed as quantities, for example: font sizes, padding, ... In most cases, you will need to tell the browser what unit you are using by adding the symbol for the quantity after the amount.
+- Many property values are expressed as quantities, for example: font sizes, padding, ... In most cases, you will need to tell the browser what unit you are using by adding the symbol for the quantity after the amount.
+- There are two types of length units: absolute and relative. `px` (or pixels) is absolute, `%` is relative (to the parent element).
 
 For example:
 
 ```css
 p {
     font-size: 16px;
+		width: 60%;
 }
 ```
 
-The font size is expressed in pixels here. `px` is the symbol for the pixels unit.
+The font size is 16 pixels (high). The width of the paragraph is 60% of the parent element.
+
 
 Common units with their symbols:
 
 - percentages: `%`
 - pixels: `px`
-- ems: `em`
-- rems: `rem`
+- viewport width: `vw`	(1vw = 1% of the width of the viewport)
+- viewport width: `vh`	(1vh = 1% of the height of the viewport)
+- ems: `em` (relative to the font-size of the element)
 
-You can also use `cm` (centimeter) and other units, but these don't make much sense when designing for screens.
+You can also use `cm` (centimeter) and other units, but these don't make much sense when designing for screens.    
+[More on the units](https://www.w3schools.com/cssref/css_units.asp)
 
 ### Comments
 
@@ -596,7 +611,7 @@ You can also use `cm` (centimeter) and other units, but these don't make much se
 
 ## Commonly used properties
 
-There are hundreds of properties. See https://www.w3schools.com/cssref/ for a complete list. Here we only mention the commonly used ones.
+There are hundreds of properties. See https://developer.mozilla.org/en-US/docs/Web/CSS/Reference for a complete list. Here we only mention the commonly used ones.
 
 ### `color`
 
@@ -615,6 +630,29 @@ Used to set the background color of an element. Example:
 ```css
 h1 {
   background-color: green;
+}
+```
+
+### `background-image`
+
+Used to set sets a background image on an element. Example:
+
+```css
+body {
+	background-image: image("../images/wallpaper.png");
+	background-repeat:repeat;
+}
+```
+`background-repeat` will set the repeat mode of the image.    
+
+`background-size` sets the size of the background image; natural size, stretched, or constrained to fit the available space.
+
+```css
+h1 {
+	background-image: image("../images/fox.png");
+	background-position: center;
+	background-repeat:no-repeat;
+	background-size: cover;
 }
 ```
 
@@ -666,17 +704,17 @@ In many cases you will see the padding and margin specified like this:
 
 ```css
 p {
-    margin: 5rem;
+    margin: 5px;
 }
 ```
 
-This means: add `5rem` of margin on all 4 sides: top, right, bottom, left.
+This means: add `5px` of margin on all 4 sides: top, right, bottom, left.
 
 There is a short way of setting different value on each sides. It's very common. Example:
 
 ```css
 p {
-    margin: 1rem 2rem 3rem 4rem;
+    margin: 2px 4px 8px 16px;
 }
 ```
 
@@ -684,10 +722,10 @@ The values are specified clockwise, starting from the top. So this is equivalent
 
 ```css
 p {
-    margin-top: 1rem;
-    margin-right: 2rem;
-    margin-bottom: 3rem;
-    margin-left: 4rem;
+    margin-top: 2px;
+    margin-right: 4px;
+    margin-bottom: 8px;
+    margin-left: 16px;
 }
 ```
 
@@ -695,9 +733,9 @@ Padding works in exactly the same way. Here's an example that uses both:
 
 ```css
 p {
-    padding: 5rem;
-    border: 1px solid black;
-    margin: 10rem;
+    padding: 20px;
+    border: 2px solid black;
+    margin: 40px;
 }
 ```
 
@@ -729,11 +767,11 @@ What fonts can be used?
 
 3 options:
 
-- Use fonts that everybody has, like Arial, Times, Courier, ...
-- Use a font service, like https://fonts.google.com. Not all of them are free. Adobe also has a font service, but most of it is not free.
-- Send the font to the user when they visit the page. Disadvantage: the page will take a bit longer to load. Also, not all fonts licenses allow you to do this (for free).
+1. Use fonts that everybody has, like Arial, Times, Courier, ...
+2. Use a font service, like https://fonts.google.com. Not all of them are free. Adobe also has a font service, but most of it is not free.
+3. Send the font to the user when they visit the page. Disadvantage: the page will take a bit longer to load. Also, not all fonts licenses allow you to do this (for free).
 
-See https://www.balbooa.com/knowledgebase/32-documentation-faq-joomla/176-how-to-add-custom-font-to-website-through-fontface for more info on the third option. Here we only look at options 1 and 2.
+See [this Mozilla tutorial on generating and using web fonts](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Web_fonts) for more info on the third option. Here we only look at options 1 and 2.
 
 #### Using commonly available fonts
 
@@ -751,7 +789,7 @@ p {
 #### Using a font service
 
 - Every service works slightly different.
-- Here we take a look at https://fonts.google.com.
+- Here we use https://fonts.google.com but there are alternatives as https://fontlibrary.org/ and https://www.fontsquirrel.com/
 - Choose a font and click on 'See specimen'.
 - For example: https://fonts.google.com/specimen/Roboto
 - Click on 'Select this font'.
@@ -771,6 +809,15 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 ```
+
+### Positioning
+todo
+
+### Transitions
+todo
+
+### Animations
+todo
 
 ## Exercise: styling a website
 
