@@ -403,7 +403,7 @@ What color will each element have?
 - A `<div>` is a block-level element. It starts on a new line.
 - A `<span>` is a inline element. It does not start on a new line.
 - These elements are tools to group content so that you can target them with CSS. You do this by adding `class` or `div` attributes.
-- Remember the [Structural elements](02_html.md/structural-elements) chapter in HTML.
+- Remember the [Structural elements](02_html.md#structural-elements) chapter in HTML.
 
 For example, let's say you want to have a border around a couple of paragraphs:
 
