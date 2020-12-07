@@ -38,8 +38,8 @@
 		- [Using commonly available fonts](#using-commonly-available-fonts)
 		- [Using a font service](#using-a-font-service)
 	- [Layout](#layout)
-	  - [Display Property](#display-property)
-	  - [Position Property](#position-property)
+	  - [Display](#display)
+	  - [Position](#position)
 	- [Transitions](#transitions)
 	- [Animations](#animations)
 - [Exercise: styling a website](#exercise-styling-a-website)
@@ -822,7 +822,7 @@ body {
 There are many ways to break the normal flow. We will see just two.
 
 
-#### Display Property
+#### Display
 
 - Specifies if/how an element is displayed. Each element has a default display behaviour (the type of rendering box) that can be overwritten.
 - The most commonly used values are:
@@ -855,7 +855,7 @@ li.coming-soon {
 You can also try `visibility: hidden;` instead of display none. You will notice that this will hide the element, but leaves the necessary space.
 
 
-#### Position Property
+#### Position
 
 - The position property is actually a set of properties working together. 
 - The most used and common values are:
