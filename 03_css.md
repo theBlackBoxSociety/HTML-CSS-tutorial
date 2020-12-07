@@ -37,7 +37,9 @@
 	- [Fonts](#fonts)
 		- [Using commonly available fonts](#using-commonly-available-fonts)
 		- [Using a font service](#using-a-font-service)
-	- [Positioning](#positioning)
+	- [Layout](#layout)
+	 - [Display Property](#display-property)
+	 - [Position Property](#position-property)
 	- [Transitions](#transitions)
 	- [Animations](#animations)
 - [Exercise: styling a website](#exercise-styling-a-website)
@@ -123,10 +125,10 @@ The order of the declarations does not matter. We could have listed `background-
 
 ### Exercise: linking a CSS file to an HTML document
 
-- Create a new directory called `css-tutorial`.
+- Create a new directory.
 - Create an HTML document in this directory. Name it `index.html`.
 - Add a few paragraphs to the document.
-- Create a directory inside stylesheet called `css`.
+- Create a directory inside the main directory called `css`.
 - Create a file called `style.css` inside the `css` directory.
 - Connect the stylesheet to the HTML document.
 - Use the stylesheet to color the paragraphs red.
@@ -255,7 +257,7 @@ p a {
 
 ### Class selectors
 
-- Tag selectors are useful, but in many cases you want to be more specific. For example, you want apply a rule only to some paragraphs, not to all.
+- Type selectors are useful, but in many cases you want to be more specific. For example, you want apply a rule only to some paragraphs, not to all.
 - In this case you can use the **`class` attribute**. This attribute can be added to any HTML element. You can then reference it in your CSS.
 
 For example, suppose you want to change the look of the first paragraph in this HTML:
@@ -283,7 +285,7 @@ Note that we added an attribute `class="intro"` to the first paragraph. This all
 You are free to choose the name of the class, but there are some rules:
 
 - The name can only contain letters and digits.
-- Spaces are not allowed inside class names. Spaces can be used to add multiple classes to the same element. For example: `class="intro centered-text"` gives the element 2 classes: intro, and centered-text.
+- Spaces are not allowed inside class names. Spaces can be used to add multiple classes to the same element. For example: `class="intro centred-text"` gives the element 2 classes: intro, and centred-text.
 - Use a dash `-` or and `_` to create word breaks inside a class name.
 
 Once you added a `class` attribute, you can target it in the CSS by adding a period `.` in front of the name:
@@ -443,9 +445,9 @@ A `<span>` is similar, but it works inline. For example:
 
 ### Exercises
 
-- Add a footer to your page using a `<div>` and a `class`.
-- Of course you can also use the semantic tags `<footer>` for a footer <div>
-- Add your name in the footer.
+- Add a footer to your page using a `<div>` (or `<footer>`) and a `class`.
+- Of course you can also use the semantic tags `<footer>` for a footer.
+- Add your name and email in the footer.
 - Make the text in the footer smaller.
 
 ### More exercises
@@ -810,26 +812,127 @@ body {
 }
 ```
 
-### Positioning
-todo
+### Layout
+
+- First, it is important to understand that every single element on a web page is a block. Literally **a rectangle of pixels**. Remember the Box Model.
+- Inline elements, as `<img>`, will line up horizontally as they can. 
+- Block elements will stack on top of each other as they start on a new line. Even if the width (with the property `width`) of an element is adjusted (reduced), an underlying element will not occupy this space unless one intervenes in the normal flow. 
+- This obviously leads not to the most sexy layouts.    
+
+There are many ways to break the normal flow. We will see just two.
+
+
+#### Display Property
+
+- Specifies if/how an element is displayed. Each element has a default display behaviour (the type of rendering box) that can be overwritten.
+- The most commonly used values are:
+ - inline: element gets the properties of an inline element
+ - block: element gets the properties of a block element
+ - inline-block: retains the properties of a block element, but is displayed in the page (in the flow) as an inline element. You can apply height and width values. 
+ - none: element is not displayed (does not take up any space).
+ 
+For example, we can use a list with multiple `<li>` for our navigation bar:
+
+```html
+<ul>
+	<li>page one</li>
+	<li>page two</li>
+	<li>page three</li>
+	<li class="coming-soon">page three</li>
+</ul>	
+```
+
+```css
+li {
+    display: inline;
+		margin-right: 10px;
+}
+li.coming-soon {
+    display: none;
+}
+```
+
+You can also try `visibility: hidden;` instead of display none. You will notice that this will hide the element, but leaves the necessary space.
+
+
+#### Position Property
+
+- The position property is actually a set of properties working together. 
+- The most used and common values are:
+ - static: the default for every single page element
+ - relative: actually means relative to itself or to it's normal position. E.g. the additional rule `top: 10px;` will shift its position 10 pixels down. 
+ - fixed: the element is positioned relative to the viewport, or the browser window itself.
+ - absolute: allows you to literally place any page element exactly where you want it but the element is removed from the flow of elements on the page.    
+ 
+- `position: absolute;` sets the position of the element to top-left. 
+- This position can changed with the properties `top`, `bottom`, `left`, and `right`.
+- It might be good to set a `width` and `height` too.   
+
+For example: 3 sticky notes on a page.
+
+```html
+<div class="notes" id="note1">
+	<p><h1>Note 1</h1> Excepteur sint occaecat</p>
+</div>
+<div class="notes" id="note2">
+	<p><h1>Note 2</h1> Sunt in culpa qui officia deserunt.</p>
+</div>
+<div class="notes" id="note3">
+	<p><h1>Note 3</h1> Mollit anim id est laborum.</p>
+</div>
+```
+
+```css
+.notes {
+  position: absolute;
+  height: 240px;
+  width: 240px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
+}
+
+#note1 {
+  background-color: rgb(226, 87, 18);
+  top: 200px;
+  left: 200px;
+  z-index: 3;
+}
+
+#note2 {
+  background-color: rgb(163, 241, 116);
+  top: 180px;
+  left: 360px;
+  z-index: 2;
+}
+
+#note3 {
+  background-color: rgb(53, 180, 242);
+  top: 250px;
+  left: 460px;
+  z-index: 1;
+}
+```
+
+- Use `z-index: value;` to change the stacking order. A higher number is higher in the stack.
+- Use `box-shadow: ..` to apply shadow.
 
 ### Transitions
-todo
+*todo*
+
+- allows you to change property values smoothly, over a given duration.
 
 ### Animations
-todo
+*todo*
+
+- An animation lets an element gradually change from one style to another.
+- You need to specify some keyframes for the animation to work. Keyframes hold what styles the element will have at certain times.
+
 
 ## Exercise: styling a website
 
 - [Go back to the last HTML exercise.](02_html.md#exercise-turn-some-content-into-a-website)
-- You can find a [solution here](exercises/content_to_website/solution).
-- Create a stylesheet in css/styles.css and connect it to both HTML pages.
-- Change the default font to a sans-serif font. You can use Arial or pick one from Google Fonts.
-- Set the font of the headings to a serif font. Again, pick Times New Roman or a font from Google Fonts.
-- Remove the underlining of the links in the header navigation (Home, About, ...). It should not affect the other links.
+- Create a stylesheet in css/styles.css and connect it to all HTML pages.
+- Change the default font. You can use a web-safe font or pick one from an online font-service (Google Fonts).
+- Remove the underlining of the links in the navigation. It should not affect the other links.
 - Make sure the links in the header are underlined when you move the mouse over them.
-- Add border below the header.
-- Add some whitespace between above and below the main content, using padding and/or margin.
-- Add a border above the footer.
+- Add borders and whitespaces above and below the elements, using padding and/or margin.
 - Make the text in the footer smaller.
-- Right-align the text in the footer.

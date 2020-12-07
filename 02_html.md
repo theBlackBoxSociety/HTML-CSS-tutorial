@@ -538,13 +538,14 @@ Common entities:
 
 ## Exercise: turn some content into a website
 
-- Make a mini-website with 2 or more pages.
-- Create a new, empty folder for this. Create the necessary files and directories. All media files (images) should be in a separate folder.
-- Each page should have a navigation on top, with links to the homepage, the about page, and a link to the KASK site. The logo should also be on top of every page, and it should link to the homepage. You can download the logo here: [exercises/content_to_website/This is our logo.jpeg](https://github.com/theBlackBoxSociety/HTML-CSS-tutorial/blob/main/exercises/content_to_website/This%20is%20our%20logo.jpeg) (right-click > save link as).
-- Each page should also have a footer, which mentions 'Made by your name here' and your email address. Your email address should be a link. (Yes, you will duplicate some code. It's fine for now.)
-- Remember: we work with HTML only now, and HTML is for structure, not for layout or design. For the moment it's OK if the logo and navigation are under each other instead of next to each other.
-- The homepage should have a list of your three favorite website. The links should work. Also include a table where you explain what HTML, CSS and JS are used for. The columns should be 'Technology' and 'Function'. There should be 3 rows, one for each technology. For 'function', choose between structure, design and interaction.
-- The about page needs to have the text in [exercises/content_to_website/about.txt](https://raw.githubusercontent.com/theBlackBoxSociety/HTML-CSS-tutorial/main/exercises/content_to_website/about.txt) (right-click > save link as). Use the appropriate HTML elements to make the structure of the text clear.
+- In this exercise you will create a website based on one of the projects you are currently working on.
+- Create a new folder for this. Create the necessary files and directories. All media files (images) should be in a separate folder.
+- Each page should have a navigation, with links to the homepage and the other pages. 
+- Each page should also have a footer.
+- One of the pages is an about-page containing a short textual explanation of the work. If you don't have a text yet, you may use dummy text.
+- Use images and eventually video or audio.
+- Make sure your media files are not too big. Limit the resolution (max. 2500pixels wide) and therefore the file size (max. 1Mb) for photos. 10 to 20Mb for video should be doable.
+- Remember: we work with HTML only now, and HTML is for structure, not for layout or design. For the moment it's OK if you can not position and style things as you would. 
 - Use proper indentation (tabs) so your code is readable.
 - Validate both HTML pages using https://validator.w3.org. There should be no errors.
 

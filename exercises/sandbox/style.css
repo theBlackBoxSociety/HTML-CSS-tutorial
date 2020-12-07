@@ -1,8 +1,36 @@
 body {
   margin: 0;
   padding: 0;
-  background-image: url(fox.png);
+  xbackground-image: url(fox.png);
   background-position: center;
   background-repeat:no-repeat;
   background-size: cover;
+}
+
+.notes {
+  position: absolute;
+  height: 240px;
+  width: 240px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+#note1 {
+  background-color: rgb(226, 87, 18);
+  top: 200px;
+  left: 200px;
+  z-index: 3;
+}
+
+#note2 {
+  background-color: rgb(163, 241, 116);
+  top: 180px;
+  left: 360px;
+  z-index: 2;
+}
+
+#note3 {
+  background-color: rgb(53, 180, 242);
+  top: 250px;
+  left: 460px;
+  z-index: 1;
 }
