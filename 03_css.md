@@ -45,6 +45,7 @@
 - [Exercise: styling a website](#exercise-styling-a-website)
 </details>
 
+
 # CSS
 
 - Never use HTML for **presentation, formatting or design** :point_right: that's what CSS is for!
