@@ -40,6 +40,9 @@
 	- [Layout](#layout)
 	  - [`display`](#display)
 	  - [`position`](#position)
+		- [Other Options](#other-options)
+		- [Responsive](#responsive)
+	- [Transforms](#transforms)	
 	- [Transitions](#transitions)
 	- [Animations](#animations)
 - [Exercise: styling a website](#exercise-styling-a-website)
@@ -815,9 +818,10 @@ body {
 
 ### Layout
 
-- First, it is important to understand that every single element on a web page is a block. Literally **a rectangle of pixels**. Remember the Box Model.
-- Inline elements, as `<img>`, will line up horizontally as they can. 
-- Block elements will stack on top of each other as they start on a new line. Even if the width (with the property `width`) of an element is adjusted (reduced), an underlying element will not occupy this space unless one intervenes in the normal flow. 
+- CSS treats each HTML element as if it is in its own box. Literally **a rectangle of pixels**. This box will either be a block-level box or an inline box.
+- Inline elements, as `<img>`, will line up horizontally, next to each other, as they can. 
+- Block elements will stack on top of each other as they start on a new line. Even if the width (with the property `width`) of an element is adjusted (reduced), an underlying element will not occupy this space unless one intervenes in the normal flow.
+- To separate boxes, you can use borders, margins, padding, and background colors. 
 - This obviously leads not to the most sexy layouts.    
 
 There are many ways to break the normal flow. We will see just two.
@@ -851,9 +855,10 @@ li {
 li.coming-soon {
     display: none;
 }
+
 ```
 
-You can also try `visibility: hidden;` instead of display none. You will notice that this will hide the element, but leaves the necessary space.
+- You can also try `visibility: hidden;` instead of display none. You will notice that this will hide the element, but leaves the necessary space.
 
 
 #### Position
@@ -867,7 +872,7 @@ You can also try `visibility: hidden;` instead of display none. You will notice 
  
 - `position: absolute;` sets the position of the element to top-left. 
 - This position can changed with the properties `top`, `bottom`, `left`, and `right`.
-- It might be good to set a `width` and `height` too.   
+- It might be good to set a `width` and `height` too.
 
 For example: 3 sticky notes on a page.
 
@@ -913,19 +918,179 @@ For example: 3 sticky notes on a page.
 }
 ```
 
-- Use `z-index: value;` to change the stacking order. A higher number is higher in the stack.
-- Use `box-shadow: ..` to apply shadow.
+- Optional: use `z-index: value;` to change the stacking order. A higher number is higher in the stack.
+- Optional: use `box-shadow: [offset-x] [offset-y] [blur-radius] [spread-radius] [color]` to apply shadow.    
+- See [this demo](demos/positions/positions.html) for the different behaviours of static, relative, absolute & fixed.    
+
+Second example: a horizontal and vertical centred element.
+
+```html
+<div class="centrednote">
+	<p><h1>Note 4</h1> In the center</p>
+</div>
+```
+
+```css
+.centrednote {
+	height: 300px;
+	width: 300px;
+	position: absolute;
+	top: calc(50vh - 120px);
+	left: calc(50vw - 120px);
+	background-color: rgb(178, 125, 199);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
+}
+```
+
+#### Other Options
+
+- Liquid, Grid, Flexbox: see https://github.com/nbriz/intro2netart/blob/master/notes/css/demos/notes/layout-modern.md and this 3 examples on [liquid layout](demos/layout/layout_liquid.html), [grid](demos/layout/layout_grid.html) and [flexbox](demos/grid&flex/layout_flexbox.html)
+
+#### Responsive
+
+- Responsive web design makes your web page look good on all devices.
+- By default most phones will just “zoom out” so that the page renders the same way on the phone as it does on desktop (& you’ll be left with a tiny looking version of ur website). 
+- To get around this we need to use the viewport meta tag, which will force the mobile browser to behave as we’d expect.
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1">
+```
+
+- A second thing you might need to do is change style rules based screensize.
+- We can do this with a Media Query. 
+
+```css
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+}
+```
+
+- See also: https://www.w3schools.com/css/css_rwd_intro.asp    
+
+### Transforms
+
+- The transform property changes the shape and position of an element without disrupting the normal document flow.
+- You can rotate, scale, skew, or translate an element. 
+- Read read more about it on [mdn](https://developer.mozilla.org/en-US/docs/Web/CSS/transform).
+
+```html
+<div class="scene">
+  <div class="panel rotate">Transformed element</div>
+</div>
+```
+
+```css
+.scene {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #CCC;
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  margin: 60px;
+  perspective: 600px;
+}
+
+.panel {
+  width: 100%;
+  height: 100%;
+  background: hsla(0, 100%, 50%, 0.7);
+  line-height: 200px;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+}
+
+.rotate {
+  transform: rotate(20deg);
+}
+
+.translate {
+	transform: translate(30px, 20px); 
+}
+.scale {
+	transform: scale(2, 0.5);
+}
+```
+
+- You can also [transform in 3D](https://3dtransforms.desandro.com/) but that will lead us to far now.
+
 
 ### Transitions
-*todo*
 
-- allows you to change property values smoothly, over a given duration.
+- Allows you to change property values smoothly, over a given duration.
+- Is actually a set of properties 
+ - transition-property: the name or names of the CSS properties to which transitions should be applied. `All` is also possible but not all properties can be animated
+ - transition-duration: the duration over which the transition should occur (e.g 300ms, 0.5s or 4s)
+ - transition-delay: extra time between the time when a property is changed and the transition begins
+ - transition-timing-function: determines how intermediate values of the transition are calculated. Most frequent used are: linear and ease but you can find more options [here](https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function). 
+- The shorthand CSS syntax is: `transition: [property] [duration] [timing-function] [delay];`
+
+```html
+<div class="box">Box</div>
+```
+
+```css
+.box {
+  background-color: #2db34a;
+  color: white;
+  border-radius: 6px;
+  height: 100px;
+	width: 100px;
+  text-align: center;
+	line-height: 100px;
+	cursor: pointer;
+  transition-property: background, border-radius;
+  transition-duration: 1s;
+  transition-timing-function: linear;
+}
+.box:hover {
+  background: #ff7b29;
+  border-radius: 50%;
+}
+```
+
+
 
 ### Animations
-*todo*
 
-- An animation lets an element gradually change from one style to another.
+
+- An animation lets an element gradually change from one style to another. It is like a transitions 2.0
 - You need to specify some keyframes for the animation to work. Keyframes hold what styles the element will have at certain times.
+- We set it up using the @keyframes rule including the animation name, any animation breakpoints, and the properties intended to be animated.
+
+
+
+```html
+<div class="shaky"></div><div class="shaky"></div><div class="shaky"></div>
+```
+
+```css
+@keyframes shake {
+  0% { transform: rotate(0deg); }
+  33% { transform: rotate(-1deg); }
+  66% { transform: rotate(0deg); }
+  99% { transform: rotate(1deg); }
+}
+.shaky {
+  display: inline-block;
+	background-color: #2db34a;
+  background-image: url(fox.png);
+  background-position: center;
+  background-repeat:no-repeat;
+  background-size: cover;
+  height: 256px;
+	width: 256px;
+	margin-left: 20px;
+  cursor: pointer;
+  animation: shake;
+}
+.shaky:hover {
+  animation: shake 0.1s;
+  animation-iteration-count: infinite;
+}
+```
 
 
 ## Exercise: styling a website

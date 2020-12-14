@@ -346,7 +346,7 @@ Inline elements:
 - Can be ordered (with a numbering) and unordered (no numbering).
 - Are block level elements.
 
-Unordered:
+Ordered:
 
 ```html
 <ol>
@@ -356,7 +356,7 @@ Unordered:
 </ol>
 ```
 
-Ordered:
+Unordered:
 
 ```html
 <ul>
@@ -486,7 +486,9 @@ Example:
 
 ### Structural elements
 
-These can help structuring your document but are not necessary. Some have a specific role and others have not.
+These can help structuring your document but are not necessary. Some have a specific role and others have not.    
+
+**The right element for the right job**    
 
 - `<header>`: a block-level element at the top part of the page, which usually contains the main navigation, a logo, a tagline, ...  Not to be confused with the `<head>` element.
 - `<footer>`: a block-level element at the bottom part of the page, which usually contains copyright info, links to social media, legal disclaimers, ...
@@ -494,6 +496,9 @@ These can help structuring your document but are not necessary. Some have a spec
 - `<main>`: a block-level element with the actual content of the page. Used only once per page.
 - `<article>`: a block-level element that represents a independent item section of content. Examples are: a forum post, a magazine or newspaper article, a blog entry.
 - `<section>`: a block-level element that groups thematic related content as chapters, .
+
+**The non-semantic wrappers**    
+
 - `<div>`: a block-level element used to define a part of a web page. The above elements are nowadays more in use as they tell more about the content. 
 - `<span>`: an inline element used to define a part of a web page.
 
@@ -524,9 +529,10 @@ These can help structuring your document but are not necessary. Some have a spec
     </body>
 </html>
 ```
+
 ### Entities
 
-- Some characters have a special meaning.
+- Or **Escape characters** are characters that are used in and reserved by HTML code.
 - For example `<` is the start of the tag.
 - We cannot use these characters directly because we would confuse the browser. We need to use 'entities'. (They need to be 'escaped'.)
 

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CSS Demos | Position</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png"  href="favicon.png">
+
+    <style>
+
+      div {
+        padding:10px;
+        background-color:#222;
+        max-width: 400px;
+        margin: 0 auto; /* centering trick, see notes on centering for more */
+      }
+
+      .blue {
+        border: 2px solid #0099ff;
+        color: #0099ff;
+      }
+
+      .red {
+        border: 2px solid #ff3300;
+        color: #ff3300;
+        /* "static" is the default, so u don't really need to specify it */
+        position: static;
+      }
+      .yellow {
+        border: 2px solid #ffcf00;
+        color: #ffcf00;
+        position: relative;
+        top: 50px;
+        left: 50px;
+      }
+      .orange {
+        border: 2px solid #ff7a00;
+        color: #ff7a00;
+        position: absolute;
+        top: 50px;
+        left: 50px;
+      }
+      .pink {
+        border: 2px solid #f200ff;
+        color: #f200ff;
+        position: fixed;
+        top: 50px;
+        right: 50px;
+      }
+
+
+    </style>
+
+  </head>
+  <body>
+
+    <div class="blue">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </div>
+
+    <div class="red">
+      <h2>position: static;</h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+    </div>
+
+    <div class="yellow">
+      <h2>position: relative;</h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+    </div>
+
+    <div class="orange">
+      <h2>position: relative;</h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+    </div>
+
+    <div class="pink">
+      <h2>position: fixed;</h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+    </div>
+    
+    <div class="blue">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </div>
+
+  </body>
+</html>

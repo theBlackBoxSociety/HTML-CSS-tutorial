@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>test</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="topnav" id="myTopnav">
+    <!--div class="dropdown">
+      <button class="dropbtn">kies
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        
+      </div>
+    </div-->
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+    <a href="test1/index.html" target="iframe_a">test1</a>
+    <a href="test2/index.html" target="iframe_a">test2</a>
+    <a href="test3/index.html" target="iframe_a">test3</a>
+  </div>
+
+  <iframe class="frame" src="" name="iframe_a"></iframe>
+
+  <script type="text/javascript">
+    var cat1 = [
+      "test1/index.html",
+      "test2/index.html",
+      "test3/index.html",
+    ];
+
+    var myFrame = document.getElementsByClassName("frame")[0];
+
+    function getRandomUrl(myFrame) {
+      var index = Math.floor(Math.random() * cat1.length);
+      var url = cat1[index];
+      myFrame.src = url;
+    }
+
+    function codeAddress() {
+      getRandomUrl(myFrame);
+    }
+
+    codeAddress();
+
+    console.log(myFrame.src);
+  </script>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+  </script>
+</body>
+
+</html>
