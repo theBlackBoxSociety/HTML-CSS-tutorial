@@ -1,5 +1,6 @@
 *---[ A crashcourse in Code]---*
 # HTML, CSS & JS
+This tutorial builds extensively [on the class notes](https://github.com/bertbalcaen/esdi-webdesign-course) from [Bert Balcaen](https://rekall.be) for ESDI. 
 
 ## Contents
 
